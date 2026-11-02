@@ -1,0 +1,66 @@
+:root {
+  --bg: #f6f7f9; --card: #ffffff; --text: #16191d; --muted: #616a75; --line: #e3e6ea;
+  --accent: #1d5fd1; --good: #1a8a4a; --bad: #c43d3d; --warn-bg: #fff4d6; --warn: #7a5600;
+  --bar-bg: #eceff3; --radius: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1216; --card: #181c22; --text: #e8eaed; --muted: #9aa3ad; --line: #2a3038;
+    --accent: #6ea2ff; --good: #4cc27f; --bad: #f07272; --warn-bg: #3a2f0f; --warn: #f5d27a;
+    --bar-bg: #262c34;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 16px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+h1 { font-size: 1.35rem; margin: 0; }
+h2 { font-size: 1.05rem; margin: 24px 0 8px; }
+nav a { color: var(--accent); text-decoration: none; margin-left: 14px; font-weight: 600; }
+nav a.active { color: var(--text); }
+.sub { color: var(--muted); font-size: .85rem; }
+.banner { background: var(--warn-bg); color: var(--warn); padding: 10px 12px; border-radius: var(--radius); margin: 0 0 12px; font-size: .9rem; }
+.banner a { color: inherit; font-weight: 600; }
+
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 10px; }
+.card-head { display: flex; justify-content: space-between; gap: 8px; color: var(--muted); font-size: .82rem; margin-bottom: 8px; }
+.team { display: grid; grid-template-columns: 6px 1fr auto; gap: 10px; align-items: center; padding: 4px 0; }
+.chip { width: 6px; height: 34px; border-radius: 3px; }
+.tname { font-weight: 650; }
+.tname .home { color: var(--muted); font-weight: 500; font-size: .8rem; margin-left: 4px; }
+.qb { color: var(--muted); font-size: .84rem; }
+.qb.flagged { color: var(--warn); }
+.prob { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 1.1rem; text-align: right; min-width: 3.4em; }
+.prob.fav { color: var(--accent); }
+.score { font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 600; margin-right: 8px; }
+.bar { display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: var(--bar-bg); margin: 8px 0 6px; }
+.bar { gap: 3px; background: none; }
+.bar span { display: block; height: 100%; border-radius: 3px; }
+.spread { display: flex; justify-content: space-between; font-size: .88rem; }
+.spread b { font-variant-numeric: tabular-nums; }
+.result.good { color: var(--good); font-weight: 600; }
+.result.bad { color: var(--bad); font-weight: 600; }
+.notes { margin: 8px 0 0; padding: 8px 10px; background: var(--warn-bg); color: var(--warn); border-radius: 8px; font-size: .82rem; list-style: none; }
+.notes li + li { margin-top: 2px; }
+
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+.tile { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; }
+.tile .k { color: var(--muted); font-size: .78rem; }
+.tile .v { font-size: 1.35rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.tile .h { color: var(--muted); font-size: .75rem; }
+
+.table-wrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; font-variant-numeric: tabular-nums; }
+th, td { padding: 8px 10px; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { color: var(--muted); font-weight: 600; font-size: .78rem; }
+tr:last-child td { border-bottom: 0; }
+.tag { font-size: .7rem; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; margin-left: 4px; }
+label.toggle { font-size: .85rem; color: var(--muted); display: inline-flex; gap: 6px; align-items: center; }
+svg.chart { width: 100%; height: 140px; display: block; }
+footer { color: var(--muted); font-size: .78rem; margin: 28px 0 8px; }
+footer a { color: inherit; }

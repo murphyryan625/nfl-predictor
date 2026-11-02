@@ -1,0 +1,98 @@
+name: NFL pipeline
+
+# GitHub cron is always UTC and doesn't know about daylight saving time, so each job has two
+# lines: one for Sep-Oct (Central Daylight Time = UTC-5) and one for Nov-Feb (Central Standard = UTC-6).
+on:
+  schedule:
+    - cron: "0 13 * 9,10 2"          # Tue  8:00 AM CDT  -> full
+    - cron: "0 14 * 1,2,11,12 2"     # Tue  8:00 AM CST  -> full
+    - cron: "0 20 * 9,10 4"          # Thu  3:00 PM CDT  -> refresh (before TNF)
+    - cron: "0 21 * 1,2,11,12 4"     # Thu  3:00 PM CST  -> refresh
+    - cron: "40 15 * 9,10 0"         # Sun 10:40 AM CDT  -> refresh (after inactives for noon games)
+    - cron: "40 16 * 1,2,11,12 0"    # Sun 10:40 AM CST  -> refresh
+    - cron: "0 13 * 9,10 1"          # Mon  8:00 AM CDT  -> score
+    - cron: "0 14 * 1,2,11,12 1"     # Mon  8:00 AM CST  -> score
+  workflow_dispatch:
+    inputs:
+      command:
+        description: "What to run"
+        type: choice
+        options: [full, refresh, score, backtest]
+        default: full
+
+permissions:
+  contents: write     # commit updated data back to the repo
+  pages: write        # publish the dashboard
+  id-token: write     # required by deploy-pages
+  issues: write       # open an issue when a run fails
+
+concurrency:
+  group: pipeline
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Pick command
+        id: cmd
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+          INPUT: ${{ github.event.inputs.command }}
+        run: |
+          if [ -n "$INPUT" ]; then CMD="$INPUT"
+          else
+            case "$SCHEDULE" in
+              *" 2") CMD=full ;;      # Tuesday
+              *" 1") CMD=score ;;     # Monday
+              *)     CMD=refresh ;;   # Thursday / Sunday
+            esac
+          fi
+          echo "command=$CMD" >> "$GITHUB_OUTPUT"
+          echo "Running: $CMD"
+
+      - name: Run pipeline
+        run: python run.py ${{ steps.cmd.outputs.command }}
+
+      - name: Commit updated data
+        run: |
+          git config user.name "nfl-pipeline-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data site/data MODEL_REPORT.md
+          if git diff --cached --quiet; then echo "No data changes"; exit 0; fi
+          git commit -m "Pipeline: ${{ steps.cmd.outputs.command }} $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git pull --rebase
+          git push
+
+      # Only reached if everything above succeeded, so a failed run never replaces the live site.
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Report failure as an issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --title "Pipeline failed: ${{ steps.cmd.outputs.command || 'run' }} on $(date -u +%Y-%m-%d)" \
+            --body "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}. The dashboard still shows the previous successful run."
+
+  deploy:
+    needs: run
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

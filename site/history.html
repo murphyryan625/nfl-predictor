@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NFL Track Record</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Track record</h1>
+    <nav><a href="index.html">This week</a><a href="history.html" class="active">Track record</a></nav>
+  </header>
+  <div id="status"></div>
+  <label class="toggle"><input type="checkbox" id="live-only"> Live predictions only (hide backfilled weeks)</label>
+  <h2>Season so far</h2>
+  <div class="tiles" id="tiles"></div>
+  <h2>Running Brier score</h2>
+  <p class="sub">Lower is better. 0.25 = coin flip. The model's 2010–2025 backtest average was about 0.216 (dashed line).</p>
+  <div class="card"><svg class="chart" id="chart" viewBox="0 0 600 140" preserveAspectRatio="none"></svg></div>
+  <h2>By week</h2>
+  <div class="table-wrap"><table id="weeks"></table></div>
+  <h2>Every game</h2>
+  <div class="table-wrap"><table id="games"></table></div>
+  <footer>“Backfill” weeks were predicted after the fact by a model trained only on earlier seasons, using
+    only pregame information — the same way the backtest works. Everything else was predicted live before kickoff.
+    <a href="https://github.com/" id="repo-link">Model report</a></footer>
+</div>
+<script src="app.js"></script>
+<script>
+let DATA;
+const BACKTEST_BRIER = 0.216;
+
+function summarize(games) {
+  const decided = games.filter(g => g.correct !== null);
+  const wins = decided.filter(g => g.correct).length;
+  const mean = k => games.reduce((s, g) => s + g[k], 0) / (games.length || 1);
+  return { n: games.length, wins, losses: decided.length - wins, brier: mean("brier"), mae: mean("spread_error") };
+}
+
+function render() {
+  const liveOnly = document.getElementById("live-only").checked;
+  const season = Math.max(...DATA.games.map(g => g.season));
+  const games = DATA.games.filter(g => g.season === season && (!liveOnly || g.run !== "backfill"));
+  const s = summarize(games);
+  document.getElementById("tiles").innerHTML = games.length ? `
+    <div class="tile"><div class="k">Picks</div><div class="v">${s.wins}–${s.losses}</div><div class="h">${pct(s.wins / (s.wins + s.losses || 1))} correct</div></div>
+    <div class="tile"><div class="k">Brier score</div><div class="v">${s.brier.toFixed(3)}</div><div class="h">coin flip = 0.250</div></div>
+    <div class="tile"><div class="k">Spread error</div><div class="v">${s.mae.toFixed(1)}</div><div class="h">avg points off</div></div>
+    <div class="tile"><div class="k">Games scored</div><div class="v">${s.n}</div><div class="h">${season} season</div></div>`
+    : `<p class="sub">No scored games yet.</p>`;
+
+  // Weekly table + running Brier
+  const weeks = [...new Set(games.map(g => g.week))].sort((a, b) => a - b);
+  let run = [], rows = "";
+  const points = [];
+  for (const w of weeks) {
+    const gw = games.filter(g => g.week === w);
+    run = run.concat(gw);
+    const a = summarize(gw), r = summarize(run);
+    const isLive = gw.some(g => g.run !== "backfill");
+    points.push(r.brier);
+    rows = `<tr><td>Week ${w}${isLive ? "" : '<span class="tag">backfill</span>'}</td><td>${a.wins}–${a.losses}</td>
+      <td>${a.brier.toFixed(3)}</td><td>${a.mae.toFixed(1)}</td><td>${r.brier.toFixed(3)}</td></tr>` + rows;
+  }
+  document.getElementById("weeks").innerHTML =
+    `<tr><th>Week</th><th>Record</th><th>Brier</th><th>Spread err</th><th>Running Brier</th></tr>${rows}`;
+  drawChart(points, weeks);
+
+  // Game list (newest week first)
+  const list = games.slice().sort((a, b) => b.week - a.week || a.kickoff_ct.localeCompare(b.kickoff_ct));
+  document.getElementById("games").innerHTML =
+    `<tr><th>Game</th><th>Pick</th><th>Win %</th><th>Pred. spread</th><th>Final</th><th>Error</th></tr>` +
+    list.map(g => {
+      const fav = g.pred_margin >= 0 ? g.home_team : g.away_team;
+      const res = g.correct === null ? "Tie" : g.correct ? '<span class="result good">✓</span>' : '<span class="result bad">✗</span>';
+      return `<tr><td>W${g.week} ${esc(g.away_team)} @ ${esc(g.home_team)}</td>
+        <td>${res} ${esc(g.pick)}</td><td>${pct(g.pick_prob)}</td><td>${esc(fav)} −${Math.abs(g.pred_margin).toFixed(1)}</td>
+        <td>${g.away_score}–${g.home_score}</td><td>${g.spread_error.toFixed(1)}</td></tr>`;
+    }).join("");
+}
+
+function drawChart(points, weeks) {
+  const svg = document.getElementById("chart");
+  if (points.length < 1) { svg.innerHTML = ""; return; }
+  const W = 600, H = 140, pad = 18, lo = 0.15, hi = 0.30;
+  const x = i => pad + (points.length === 1 ? (W - 2 * pad) / 2 : i * (W - 2 * pad) / (points.length - 1));
+  const y = v => H - pad - (Math.min(Math.max(v, lo), hi) - lo) / (hi - lo) * (H - 2 * pad);
+  const path = points.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("");
+  const css = getComputedStyle(document.documentElement);
+  const accent = css.getPropertyValue("--accent"), muted = css.getPropertyValue("--muted"), line = css.getPropertyValue("--line");
+  svg.innerHTML = `
+    <line x1="${pad}" x2="${W - pad}" y1="${y(0.25)}" y2="${y(0.25)}" stroke="${line}" stroke-width="1"/>
+    <text x="${W - pad}" y="${y(0.25) - 4}" text-anchor="end" font-size="11" fill="${muted}">0.25 coin flip</text>
+    <line x1="${pad}" x2="${W - pad}" y1="${y(BACKTEST_BRIER)}" y2="${y(BACKTEST_BRIER)}" stroke="${muted}" stroke-dasharray="4 4" stroke-width="1"/>
+    <path d="${path}" fill="none" stroke="${accent}" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
+    ${points.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="3" fill="${accent}"><title>Week ${weeks[i]}: ${v.toFixed(3)}</title></circle>`).join("")}`;
+}
+
+loadJSON("data/history.json").then(d => {
+  DATA = d;
+  showStatus(d.generated_at);
+  document.getElementById("live-only").addEventListener("change", render);
+  render();
+}).catch(err => {
+  document.getElementById("tiles").innerHTML = `<div class="banner">Couldn't load history (${err}).</div>`;
+});
+</script>
+</body>
+</html>

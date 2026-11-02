@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NFL Predictions</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1 id="title">NFL Predictions</h1>
+    <nav><a href="index.html" class="active">This week</a><a href="history.html">Track record</a></nav>
+  </header>
+  <div id="status"></div>
+  <p class="sub" id="updated"></p>
+  <div id="games"><p class="sub">Loading…</p></div>
+  <footer>
+    Win probabilities and spreads come from one model (predicted margin → win %). No betting lines are used.
+    Kickoffs in Central Time. <a href="https://github.com/" id="repo-link">Source &amp; model report</a>
+  </footer>
+</div>
+<script src="app.js"></script>
+<script>
+loadJSON("data/current.json").then(d => {
+  showStatus(d.generated_at);
+  document.getElementById("title").textContent = `NFL Week ${d.week} Predictions`;
+  document.getElementById("updated").textContent =
+    `${d.season} season · updated ${fmtDateTime(d.generated_at)} CT`;
+  const el = document.getElementById("games");
+  if (!d.games.length) { el.innerHTML = `<p class="sub">No games scheduled.</p>`; return; }
+  let html = "", lastDay = "";
+  for (const g of d.games) {
+    const day = fmtDay(g.kickoff_ct);
+    if (day !== lastDay) { html += `<h2>${day}</h2>`; lastDay = day; }
+    html += gameCard(g, d.teams);
+  }
+  el.innerHTML = html;
+}).catch(err => {
+  document.getElementById("games").innerHTML = `<div class="banner">Couldn't load predictions (${err}).</div>`;
+});
+</script>
+</body>
+</html>

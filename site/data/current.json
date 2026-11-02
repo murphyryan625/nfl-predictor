@@ -1,0 +1,456 @@
+{
+ "generated_at": "2026-11-01T19:16-06:00",
+ "season": 2026,
+ "week": 8,
+ "teams": {
+  "ARI": {
+   "name": "Arizona Cardinals",
+   "nick": "Cardinals",
+   "color": "#97233F"
+  },
+  "ATL": {
+   "name": "Atlanta Falcons",
+   "nick": "Falcons",
+   "color": "#A71930"
+  },
+  "BAL": {
+   "name": "Baltimore Ravens",
+   "nick": "Ravens",
+   "color": "#241773"
+  },
+  "BUF": {
+   "name": "Buffalo Bills",
+   "nick": "Bills",
+   "color": "#00338D"
+  },
+  "CAR": {
+   "name": "Carolina Panthers",
+   "nick": "Panthers",
+   "color": "#0085CA"
+  },
+  "CHI": {
+   "name": "Chicago Bears",
+   "nick": "Bears",
+   "color": "#0B162A"
+  },
+  "CIN": {
+   "name": "Cincinnati Bengals",
+   "nick": "Bengals",
+   "color": "#FB4F14"
+  },
+  "CLE": {
+   "name": "Cleveland Browns",
+   "nick": "Browns",
+   "color": "#FF3C00"
+  },
+  "DAL": {
+   "name": "Dallas Cowboys",
+   "nick": "Cowboys",
+   "color": "#002244"
+  },
+  "DEN": {
+   "name": "Denver Broncos",
+   "nick": "Broncos",
+   "color": "#002244"
+  },
+  "DET": {
+   "name": "Detroit Lions",
+   "nick": "Lions",
+   "color": "#0076B6"
+  },
+  "GB": {
+   "name": "Green Bay Packers",
+   "nick": "Packers",
+   "color": "#203731"
+  },
+  "HOU": {
+   "name": "Houston Texans",
+   "nick": "Texans",
+   "color": "#03202F"
+  },
+  "IND": {
+   "name": "Indianapolis Colts",
+   "nick": "Colts",
+   "color": "#002C5F"
+  },
+  "JAX": {
+   "name": "Jacksonville Jaguars",
+   "nick": "Jaguars",
+   "color": "#006778"
+  },
+  "KC": {
+   "name": "Kansas City Chiefs",
+   "nick": "Chiefs",
+   "color": "#E31837"
+  },
+  "MIA": {
+   "name": "Miami Dolphins",
+   "nick": "Dolphins",
+   "color": "#008E97"
+  },
+  "MIN": {
+   "name": "Minnesota Vikings",
+   "nick": "Vikings",
+   "color": "#4F2683"
+  },
+  "NE": {
+   "name": "New England Patriots",
+   "nick": "Patriots",
+   "color": "#002244"
+  },
+  "NO": {
+   "name": "New Orleans Saints",
+   "nick": "Saints",
+   "color": "#D3BC8D"
+  },
+  "NYG": {
+   "name": "New York Giants",
+   "nick": "Giants",
+   "color": "#0B2265"
+  },
+  "NYJ": {
+   "name": "New York Jets",
+   "nick": "Jets",
+   "color": "#003F2D"
+  },
+  "LV": {
+   "name": "Oakland Raiders",
+   "nick": "Raiders",
+   "color": "#000000"
+  },
+  "PHI": {
+   "name": "Philadelphia Eagles",
+   "nick": "Eagles",
+   "color": "#004C54"
+  },
+  "PIT": {
+   "name": "Pittsburgh Steelers",
+   "nick": "Steelers",
+   "color": "#000000"
+  },
+  "LAC": {
+   "name": "San Diego Chargers",
+   "nick": "Chargers",
+   "color": "#007BC7"
+  },
+  "SEA": {
+   "name": "Seattle Seahawks",
+   "nick": "Seahawks",
+   "color": "#002244"
+  },
+  "SF": {
+   "name": "San Francisco 49ers",
+   "nick": "49ers",
+   "color": "#AA0000"
+  },
+  "LA": {
+   "name": "St. Louis Rams",
+   "nick": "Rams",
+   "color": "#003594"
+  },
+  "TB": {
+   "name": "Tampa Bay Buccaneers",
+   "nick": "Buccaneers",
+   "color": "#A71930"
+  },
+  "TEN": {
+   "name": "Tennessee Titans",
+   "nick": "Titans",
+   "color": "#4495D2"
+  },
+  "WAS": {
+   "name": "Washington Commanders",
+   "nick": "Commanders",
+   "color": "#5A1414"
+  }
+ },
+ "games": [
+  {
+   "game_id": "2026_08_CAR_GB",
+   "season": 2026,
+   "week": 8,
+   "game_type": "REG",
+   "kickoff_ct": "2026-10-29T19:15:00-05:00",
+   "home_team": "GB",
+   "away_team": "CAR",
+   "home_qb": "Jordan Love",
+   "away_qb": "Bryce Young",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 4.37,
+   "home_win_prob": 0.631,
+   "notes": [],
+   "predicted_at": null,
+   "run": "backfill",
+   "home_score": 27.0,
+   "away_score": 19.0
+  },
+  {
+   "game_id": "2026_08_ARI_DAL",
+   "season": 2026,
+   "week": 8,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-01T12:00:00-06:00",
+   "home_team": "DAL",
+   "away_team": "ARI",
+   "home_qb": "Dak Prescott",
+   "away_qb": "Jacoby Brissett",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 7.07,
+   "home_win_prob": 0.7059,
+   "notes": [],
+   "predicted_at": null,
+   "run": "backfill",
+   "home_score": 30.0,
+   "away_score": 33.0
+  },
+  {
+   "game_id": "2026_08_ATL_TB",
+   "season": 2026,
+   "week": 8,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-01T12:00:00-06:00",
+   "home_team": "TB",
+   "away_team": "ATL",
+   "home_qb": "Baker Mayfield",
+   "away_qb": "Michael Penix Jr.",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 2.63,
+   "home_win_prob": 0.5797,
+   "notes": [],
+   "predicted_at": null,
+   "run": "backfill",
+   "home_score": 16.0,
+   "away_score": 0.0
+  },
+  {
+   "game_id": "2026_08_BAL_BUF",
+   "season": 2026,
+   "week": 8,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-01T12:00:00-06:00",
+   "home_team": "BUF",
+   "away_team": "BAL",
+   "home_qb": "Josh Allen",
+   "away_qb": "Lamar Jackson",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 6.75,
+   "home_win_prob": 0.6974,
+   "notes": [],
+   "predicted_at": null,
+   "run": "backfill",
+   "home_score": 36.0,
+   "away_score": 10.0
+  },
+  {
+   "game_id": "2026_08_CLE_PIT",
+   "season": 2026,
+   "week": 8,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-01T12:00:00-06:00",
+   "home_team": "PIT",
+   "away_team": "CLE",
+   "home_qb": "Aaron Rodgers",
+   "away_qb": "Deshaun Watson",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 5.08,
+   "home_win_prob": 0.6512,
+   "notes": [],
+   "predicted_at": null,
+   "run": "backfill",
+   "home_score": 27.0,
+   "away_score": 6.0
+  },
+  {
+   "game_id": "2026_08_IND_JAX",
+   "season": 2026,
+   "week": 8,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-01T12:00:00-06:00",
+   "home_team": "JAX",
+   "away_team": "IND",
+   "home_qb": "Trevor Lawrence",
+   "away_qb": "Daniel Jones",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 10.0,
+   "home_win_prob": 0.7782,
+   "notes": [],
+   "predicted_at": null,
+   "run": "backfill",
+   "home_score": 42.0,
+   "away_score": 7.0
+  },
+  {
+   "game_id": "2026_08_LV_NYJ",
+   "season": 2026,
+   "week": 8,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-01T12:00:00-06:00",
+   "home_team": "NYJ",
+   "away_team": "LV",
+   "home_qb": "Geno Smith",
+   "away_qb": "Kirk Cousins",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 2.17,
+   "home_win_prob": 0.566,
+   "notes": [],
+   "predicted_at": null,
+   "run": "backfill",
+   "home_score": 33.0,
+   "away_score": 38.0
+  },
+  {
+   "game_id": "2026_08_MIN_DET",
+   "season": 2026,
+   "week": 8,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-01T12:00:00-06:00",
+   "home_team": "DET",
+   "away_team": "MIN",
+   "home_qb": "Jared Goff",
+   "away_qb": "Kyler Murray",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 1.64,
+   "home_win_prob": 0.5499,
+   "notes": [],
+   "predicted_at": null,
+   "run": "backfill",
+   "home_score": 19.0,
+   "away_score": 15.0
+  },
+  {
+   "game_id": "2026_08_TEN_CIN",
+   "season": 2026,
+   "week": 8,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-01T12:00:00-06:00",
+   "home_team": "CIN",
+   "away_team": "TEN",
+   "home_qb": "Joe Burrow",
+   "away_qb": "Cam Ward",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 14.87,
+   "home_win_prob": 0.8726,
+   "notes": [],
+   "predicted_at": null,
+   "run": "backfill",
+   "home_score": 43.0,
+   "away_score": 36.0
+  },
+  {
+   "game_id": "2026_08_LAC_LA",
+   "season": 2026,
+   "week": 8,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-01T15:05:00-06:00",
+   "home_team": "LA",
+   "away_team": "LAC",
+   "home_qb": "Matthew Stafford",
+   "away_qb": "Justin Herbert",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 11.49,
+   "home_win_prob": 0.8106,
+   "notes": [],
+   "predicted_at": null,
+   "run": "backfill",
+   "home_score": 24.0,
+   "away_score": 9.0
+  },
+  {
+   "game_id": "2026_08_KC_DEN",
+   "season": 2026,
+   "week": 8,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-01T15:25:00-06:00",
+   "home_team": "DEN",
+   "away_team": "KC",
+   "home_qb": "Bo Nix",
+   "away_qb": "Patrick Mahomes",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 0.08,
+   "home_win_prob": 0.5024,
+   "notes": [],
+   "predicted_at": null,
+   "run": "backfill",
+   "home_score": 28.0,
+   "away_score": 24.0
+  },
+  {
+   "game_id": "2026_08_NE_MIA",
+   "season": 2026,
+   "week": 8,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-01T15:25:00-06:00",
+   "home_team": "MIA",
+   "away_team": "NE",
+   "home_qb": "Malik Willis",
+   "away_qb": "Drake Maye",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": -6.13,
+   "home_win_prob": 0.3195,
+   "notes": [],
+   "predicted_at": null,
+   "run": "backfill",
+   "home_score": 19.0,
+   "away_score": 24.0
+  },
+  {
+   "game_id": "2026_08_PHI_WAS",
+   "season": 2026,
+   "week": 8,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-01T19:20:00-06:00",
+   "home_team": "WAS",
+   "away_team": "PHI",
+   "home_qb": "Jayden Daniels",
+   "away_qb": "Tanner McKee",
+   "home_qb_flags": [],
+   "away_qb_flags": [
+    "QB change from last game (Jalen Hurts)"
+   ],
+   "pred_margin": 8.41,
+   "home_win_prob": 0.741,
+   "notes": [
+    "PHI: QB change from last game (Jalen Hurts)",
+    "PHI: starter has limited NFL history"
+   ],
+   "predicted_at": "2026-11-01T19:16-06:00",
+   "run": "refresh",
+   "home_score": null,
+   "away_score": null
+  },
+  {
+   "game_id": "2026_08_CHI_SEA",
+   "season": 2026,
+   "week": 8,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-02T19:15:00-06:00",
+   "home_team": "SEA",
+   "away_team": "CHI",
+   "home_qb": "Sam Darnold",
+   "away_qb": "Caleb Williams",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 1.38,
+   "home_win_prob": 0.5421,
+   "notes": [
+    "Toss-up"
+   ],
+   "predicted_at": "2026-11-01T19:16-06:00",
+   "run": "refresh",
+   "home_score": null,
+   "away_score": null
+  }
+ ]
+}
