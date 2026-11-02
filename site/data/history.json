@@ -1,14 +1,20 @@
 {
- "generated_at": "2026-11-01T19:25-06:00",
+ "generated_at": "2026-11-02T16:31-06:00",
  "summary": {
   "all": {
-   "games": 119,
-   "wins": 79,
+   "games": 120,
+   "wins": 80,
    "losses": 39,
-   "brier": 0.2186,
-   "spread_mae": 9.65
+   "brier": 0.2174,
+   "spread_mae": 9.64
   },
-  "live_only": null
+  "live_only": {
+   "games": 1,
+   "wins": 1,
+   "losses": 0,
+   "brier": 0.0671,
+   "spread_mae": 8.59
+  }
  },
  "weekly": [
   {
@@ -91,13 +97,13 @@
   {
    "season": 2026,
    "week": 8,
-   "games": 12,
-   "wins": 10,
+   "games": 13,
+   "wins": 11,
    "losses": 2,
-   "brier": 0.1665,
-   "spread_mae": 9.43,
-   "running_brier": 0.2186,
-   "live": false
+   "brier": 0.1589,
+   "spread_mae": 9.37,
+   "running_brier": 0.2174,
+   "live": true
   }
  ],
  "games": [
@@ -412,6 +418,37 @@
    "correct": 1.0,
    "spread_error": 1.13,
    "brier": 0.10208025
+  },
+  {
+   "game_id": "2026_08_PHI_WAS",
+   "season": 2026,
+   "week": 8,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-01T19:20:00-06:00",
+   "home_team": "WAS",
+   "away_team": "PHI",
+   "home_qb": "Jayden Daniels",
+   "away_qb": "Tanner McKee",
+   "home_qb_flags": [],
+   "away_qb_flags": [
+    "QB change from last game (Jalen Hurts)"
+   ],
+   "pred_margin": 8.41,
+   "home_win_prob": 0.741,
+   "notes": [
+    "PHI: QB change from last game (Jalen Hurts)",
+    "PHI: starter has limited NFL history"
+   ],
+   "predicted_at": "2026-11-01T19:16-06:00",
+   "run": "refresh",
+   "home_score": 27.0,
+   "away_score": 10.0,
+   "margin": 17.0,
+   "pick": "WAS",
+   "pick_prob": 0.741,
+   "correct": 1.0,
+   "spread_error": 8.59,
+   "brier": 0.067081
   },
   {
    "game_id": "2026_07_NE_CHI",

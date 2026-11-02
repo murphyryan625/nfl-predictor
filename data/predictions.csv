@@ -118,5 +118,5 @@ game_id,season,week,game_type,kickoff_ct,home_team,away_team,home_qb,away_qb,hom
 2026_08_LAC_LA,2026,8,REG,2026-11-01T15:05:00-06:00,LA,LAC,Matthew Stafford,Justin Herbert,[],[],11.49,0.8106,[],,backfill,24.0,9.0
 2026_08_KC_DEN,2026,8,REG,2026-11-01T15:25:00-06:00,DEN,KC,Bo Nix,Patrick Mahomes,[],[],0.08,0.5024,[],,backfill,28.0,24.0
 2026_08_NE_MIA,2026,8,REG,2026-11-01T15:25:00-06:00,MIA,NE,Malik Willis,Drake Maye,[],[],-6.13,0.3195,[],,backfill,19.0,24.0
-2026_08_PHI_WAS,2026,8,REG,2026-11-01T19:20:00-06:00,WAS,PHI,Jayden Daniels,Tanner McKee,[],"[""QB change from last game (Jalen Hurts)""]",8.41,0.741,"[""PHI: QB change from last game (Jalen Hurts)"", ""PHI: starter has limited NFL history""]",2026-11-01T19:16-06:00,refresh,,
+2026_08_PHI_WAS,2026,8,REG,2026-11-01T19:20:00-06:00,WAS,PHI,Jayden Daniels,Tanner McKee,[],"[""QB change from last game (Jalen Hurts)""]",8.41,0.741,"[""PHI: QB change from last game (Jalen Hurts)"", ""PHI: starter has limited NFL history""]",2026-11-01T19:16-06:00,refresh,27.0,10.0
 2026_08_CHI_SEA,2026,8,REG,2026-11-02T19:15:00-06:00,SEA,CHI,Sam Darnold,Caleb Williams,[],[],1.38,0.5421,"[""Toss-up""]",2026-11-01T19:25-06:00,refresh,,

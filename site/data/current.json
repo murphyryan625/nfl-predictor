@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-01T19:25-06:00",
+ "generated_at": "2026-11-02T16:31-06:00",
  "season": 2026,
  "week": 8,
  "teams": {
@@ -427,8 +427,8 @@
    ],
    "predicted_at": "2026-11-01T19:16-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 27.0,
+   "away_score": 10.0
   },
   {
    "game_id": "2026_08_CHI_SEA",
