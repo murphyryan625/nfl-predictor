@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-11-02T16:31-06:00",
+ "generated_at": "2026-11-03T14:25-06:00",
  "summary": {
   "all": {
-   "games": 120,
+   "games": 121,
    "wins": 80,
-   "losses": 39,
-   "brier": 0.2174,
-   "spread_mae": 9.64
+   "losses": 40,
+   "brier": 0.218,
+   "spread_mae": 9.71
   },
   "live_only": {
-   "games": 1,
+   "games": 2,
    "wins": 1,
-   "losses": 0,
-   "brier": 0.0671,
-   "spread_mae": 8.59
+   "losses": 1,
+   "brier": 0.1805,
+   "spread_mae": 13.48
   }
  },
  "weekly": [
@@ -97,12 +97,12 @@
   {
    "season": 2026,
    "week": 8,
-   "games": 13,
+   "games": 14,
    "wins": 11,
-   "losses": 2,
-   "brier": 0.1589,
-   "spread_mae": 9.37,
-   "running_brier": 0.2174,
+   "losses": 3,
+   "brier": 0.1685,
+   "spread_mae": 10.01,
+   "running_brier": 0.218,
    "live": true
   }
  ],
@@ -449,6 +449,34 @@
    "correct": 1.0,
    "spread_error": 8.59,
    "brier": 0.067081
+  },
+  {
+   "game_id": "2026_08_CHI_SEA",
+   "season": 2026,
+   "week": 8,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-02T19:15:00-06:00",
+   "home_team": "SEA",
+   "away_team": "CHI",
+   "home_qb": "Sam Darnold",
+   "away_qb": "Caleb Williams",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 1.38,
+   "home_win_prob": 0.5421,
+   "notes": [
+    "Toss-up"
+   ],
+   "predicted_at": "2026-11-01T19:25-06:00",
+   "run": "refresh",
+   "home_score": 17.0,
+   "away_score": 34.0,
+   "margin": -17.0,
+   "pick": "SEA",
+   "pick_prob": 0.5421,
+   "correct": 0.0,
+   "spread_error": 18.38,
+   "brier": 0.29387241000000003
   },
   {
    "game_id": "2026_07_NE_CHI",
