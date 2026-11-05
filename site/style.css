@@ -36,6 +36,7 @@ nav a.active { color: var(--text); }
 .qb.flagged { color: var(--warn); }
 .prob { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 1.1rem; text-align: right; min-width: 3.4em; }
 .prob.fav { color: var(--accent); }
+.ml { display: block; text-align: right; font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 .score { font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 600; margin-right: 8px; }
 .bar { display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: var(--bar-bg); margin: 8px 0 6px; }
 .bar { gap: 3px; background: none; }

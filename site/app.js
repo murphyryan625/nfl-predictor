@@ -10,6 +10,12 @@ async function loadJSON(path) {
 
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const pct = p => Math.round(p * 100) + "%";
+// Fair (no-vig) American moneyline implied by a win probability, e.g. 0.75 -> -300, 0.25 -> +300.
+function moneyline(p) {
+  p = Math.min(Math.max(p, 0.001), 0.999);
+  if (Math.abs(p - 0.5) < 0.0025) return "+100";
+  return p > 0.5 ? "−" + Math.round(100 * p / (1 - p)) : "+" + Math.round(100 * (1 - p) / p);
+}
 const fmtDay = iso => new Date(iso).toLocaleDateString("en-US", { timeZone: TZ, weekday: "long", month: "short", day: "numeric" });
 const fmtTime = iso => new Date(iso).toLocaleTimeString("en-US", { timeZone: TZ, hour: "numeric", minute: "2-digit" });
 const fmtDateTime = iso => new Date(iso).toLocaleString("en-US", { timeZone: TZ, weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
@@ -42,7 +48,7 @@ function teamRow(abbr, side, g, teams, prob, isFav, score) {
     <span class="chip" style="background:${esc(t.color)}"></span>
     <div><div class="tname">${esc(t.name)}${side === "home" ? '<span class="home">home</span>' : ""}</div>
       <div class="qb ${flags.length ? "flagged" : ""}">QB ${esc(qb)}${flags.length ? " ⚠" : ""}</div></div>
-    <div>${score != null ? `<span class="score">${score}</span>` : ""}<span class="prob ${isFav ? "fav" : ""}">${pct(prob)}</span></div>
+    <div>${score != null ? `<span class="score">${score}</span>` : ""}<span class="prob ${isFav ? "fav" : ""}">${pct(prob)}</span><span class="ml">${moneyline(prob)}</span></div>
   </div>`;
 }
 
@@ -67,7 +73,7 @@ function gameCard(g, teams) {
     ${teamRow(g.away_team, "away", g, teams, pA, pA > pH, done ? g.away_score : null)}
     ${teamRow(g.home_team, "home", g, teams, pH, pH >= pA, done ? g.home_score : null)}
     <div class="bar"><span style="width:${pA * 100}%;background:${esc(ac)}"></span><span style="width:${pH * 100}%;background:${esc(hc)}"></span></div>
-    <div class="spread"><span>Predicted spread: <b>${line}</b></span>${result}</div>
+    <div class="spread"><span>Predicted spread: <b>${line}</b> · Fair ML: <b>${esc(favName)} ${moneyline(Math.max(pH, pA))}</b></span>${result}</div>
     ${notes.length ? `<ul class="notes">${notes.map(n => `<li>⚠ ${esc(n)}</li>`).join("")}</ul>` : ""}
   </div>`;
 }

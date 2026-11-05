@@ -71,12 +71,12 @@ function render() {
   // Game list (newest week first)
   const list = games.slice().sort((a, b) => b.week - a.week || a.kickoff_ct.localeCompare(b.kickoff_ct));
   document.getElementById("games").innerHTML =
-    `<tr><th>Game</th><th>Pick</th><th>Win %</th><th>Pred. spread</th><th>Final</th><th>Error</th></tr>` +
+    `<tr><th>Game</th><th>Pick</th><th>Win %</th><th>Fair ML</th><th>Pred. spread</th><th>Final</th><th>Error</th></tr>` +
     list.map(g => {
       const fav = g.pred_margin >= 0 ? g.home_team : g.away_team;
       const res = g.correct === null ? "Tie" : g.correct ? '<span class="result good">✓</span>' : '<span class="result bad">✗</span>';
       return `<tr><td>W${g.week} ${esc(g.away_team)} @ ${esc(g.home_team)}</td>
-        <td>${res} ${esc(g.pick)}</td><td>${pct(g.pick_prob)}</td><td>${esc(fav)} −${Math.abs(g.pred_margin).toFixed(1)}</td>
+        <td>${res} ${esc(g.pick)}</td><td>${pct(g.pick_prob)}</td><td>${moneyline(g.pick_prob)}</td><td>${esc(fav)} −${Math.abs(g.pred_margin).toFixed(1)}</td>
         <td>${g.away_score}–${g.home_score}</td><td>${g.spread_error.toFixed(1)}</td></tr>`;
     }).join("");
 }
