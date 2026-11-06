@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T14:25-06:00",
+ "generated_at": "2026-11-05T19:13-06:00",
  "season": 2026,
  "week": 9,
  "teams": {
@@ -173,19 +173,20 @@
    "kickoff_ct": "2026-11-05T19:15:00-06:00",
    "home_team": "BAL",
    "away_team": "JAX",
-   "home_qb": "Tyler Huntley",
+   "home_qb": "Joe Fagnano",
    "away_qb": "Trevor Lawrence",
    "home_qb_flags": [
     "QB change from last game (Lamar Jackson)"
    ],
    "away_qb_flags": [],
-   "pred_margin": -6.85,
-   "home_win_prob": 0.2993,
+   "pred_margin": -9.87,
+   "home_win_prob": 0.224,
    "notes": [
-    "BAL: QB change from last game (Lamar Jackson)"
+    "BAL: QB change from last game (Lamar Jackson)",
+    "BAL: starter has limited NFL history"
    ],
-   "predicted_at": "2026-11-03T14:25-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -206,8 +207,8 @@
    "notes": [
     "Neutral site (no home field)"
    ],
-   "predicted_at": "2026-11-03T14:25-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -228,8 +229,8 @@
    "notes": [
     "Toss-up"
    ],
-   "predicted_at": "2026-11-03T14:25-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -250,8 +251,8 @@
    "notes": [
     "Toss-up"
    ],
-   "predicted_at": "2026-11-03T14:25-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -270,8 +271,8 @@
    "pred_margin": -2.81,
    "home_win_prob": 0.4147,
    "notes": [],
-   "predicted_at": "2026-11-03T14:25-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -290,8 +291,8 @@
    "pred_margin": -7.33,
    "home_win_prob": 0.2865,
    "notes": [],
-   "predicted_at": "2026-11-03T14:25-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -310,8 +311,8 @@
    "pred_margin": -5.51,
    "home_win_prob": 0.3361,
    "notes": [],
-   "predicted_at": "2026-11-03T14:25-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -323,17 +324,20 @@
    "kickoff_ct": "2026-11-08T12:00:00-06:00",
    "home_team": "PHI",
    "away_team": "NYG",
-   "home_qb": "Tanner McKee",
+   "home_qb": "Joe Milton III",
    "away_qb": "J.J. McCarthy",
-   "home_qb_flags": [],
+   "home_qb_flags": [
+    "QB change from last game (Tanner McKee)"
+   ],
    "away_qb_flags": [],
-   "pred_margin": -3.09,
-   "home_win_prob": 0.4062,
+   "pred_margin": -2.53,
+   "home_win_prob": 0.4229,
    "notes": [
+    "PHI: QB change from last game (Tanner McKee)",
     "PHI: starter has limited NFL history"
    ],
-   "predicted_at": "2026-11-03T14:25-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -352,8 +356,8 @@
    "pred_margin": 9.69,
    "home_win_prob": 0.7716,
    "notes": [],
-   "predicted_at": "2026-11-03T14:25-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -372,8 +376,8 @@
    "pred_margin": -5.47,
    "home_win_prob": 0.3372,
    "notes": [],
-   "predicted_at": "2026-11-03T14:25-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -392,8 +396,8 @@
    "pred_margin": 14.75,
    "home_win_prob": 0.8715,
    "notes": [],
-   "predicted_at": "2026-11-03T14:25-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -416,8 +420,8 @@
    "notes": [
     "ARI: QB change from last game (Jacoby Brissett)"
    ],
-   "predicted_at": "2026-11-03T14:25-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -436,8 +440,8 @@
    "pred_margin": 4.29,
    "home_win_prob": 0.6292,
    "notes": [],
-   "predicted_at": "2026-11-03T14:25-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -456,8 +460,8 @@
    "pred_margin": 5.31,
    "home_win_prob": 0.6584,
    "notes": [],
-   "predicted_at": "2026-11-03T14:25-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -476,8 +480,8 @@
    "pred_margin": -1.87,
    "home_win_prob": 0.443,
    "notes": [],
-   "predicted_at": "2026-11-03T14:25-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   }
