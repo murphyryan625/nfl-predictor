@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-11-05T19:13-06:00",
+ "generated_at": "2026-11-08T14:44-06:00",
  "summary": {
   "all": {
-   "games": 121,
-   "wins": 80,
+   "games": 123,
+   "wins": 82,
    "losses": 40,
-   "brier": 0.218,
-   "spread_mae": 9.71
+   "brier": 0.2158,
+   "spread_mae": 9.75
   },
   "live_only": {
-   "games": 2,
-   "wins": 1,
+   "games": 4,
+   "wins": 3,
    "losses": 1,
-   "brier": 0.1805,
-   "spread_mae": 13.48
+   "brier": 0.1323,
+   "spread_mae": 12.96
   }
  },
  "weekly": [
@@ -104,9 +104,79 @@
    "spread_mae": 10.01,
    "running_brier": 0.218,
    "live": true
+  },
+  {
+   "season": 2026,
+   "week": 9,
+   "games": 2,
+   "wins": 2,
+   "losses": 0,
+   "brier": 0.0842,
+   "spread_mae": 12.45,
+   "running_brier": 0.2158,
+   "live": true
   }
  ],
  "games": [
+  {
+   "game_id": "2026_09_JAX_BAL",
+   "season": 2026,
+   "week": 9,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-05T19:15:00-06:00",
+   "home_team": "BAL",
+   "away_team": "JAX",
+   "home_qb": "Joe Fagnano",
+   "away_qb": "Trevor Lawrence",
+   "home_qb_flags": [
+    "QB change from last game (Lamar Jackson)"
+   ],
+   "away_qb_flags": [],
+   "pred_margin": -9.87,
+   "home_win_prob": 0.224,
+   "notes": [
+    "BAL: QB change from last game (Lamar Jackson)",
+    "BAL: starter has limited NFL history"
+   ],
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
+   "home_score": 10.0,
+   "away_score": 33.0,
+   "margin": -23.0,
+   "pick": "JAX",
+   "pick_prob": 0.776,
+   "correct": 1.0,
+   "spread_error": 13.13,
+   "brier": 0.050176000000000005
+  },
+  {
+   "game_id": "2026_09_CIN_ATL",
+   "season": 2026,
+   "week": 9,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-08T08:30:00-06:00",
+   "home_team": "ATL",
+   "away_team": "CIN",
+   "home_qb": "Michael Penix Jr.",
+   "away_qb": "Joe Burrow",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": -5.24,
+   "home_win_prob": 0.3437,
+   "notes": [
+    "Neutral site (no home field)"
+   ],
+   "predicted_at": "2026-11-05T19:13-06:00",
+   "run": "refresh",
+   "home_score": 17.0,
+   "away_score": 34.0,
+   "margin": -17.0,
+   "pick": "CIN",
+   "pick_prob": 0.6563,
+   "correct": 1.0,
+   "spread_error": 11.76,
+   "brier": 0.11812969000000001
+  },
   {
    "game_id": "2026_08_CAR_GB",
    "season": 2026,

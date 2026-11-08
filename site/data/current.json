@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T19:13-06:00",
+ "generated_at": "2026-11-08T14:44-06:00",
  "season": 2026,
  "week": 9,
  "teams": {
@@ -187,8 +187,8 @@
    ],
    "predicted_at": "2026-11-05T19:13-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 10.0,
+   "away_score": 33.0
   },
   {
    "game_id": "2026_09_CIN_ATL",
@@ -209,8 +209,8 @@
    ],
    "predicted_at": "2026-11-05T19:13-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 17.0,
+   "away_score": 34.0
   },
   {
    "game_id": "2026_09_CLE_NO",
@@ -373,10 +373,10 @@
    "away_qb": "C.J. Stroud",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": -5.47,
-   "home_win_prob": 0.3372,
+   "pred_margin": -5.56,
+   "home_win_prob": 0.3348,
    "notes": [],
-   "predicted_at": "2026-11-05T19:13-06:00",
+   "predicted_at": "2026-11-08T14:44-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -393,10 +393,10 @@
    "away_qb": "Kirk Cousins",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": 14.75,
-   "home_win_prob": 0.8715,
+   "pred_margin": 14.76,
+   "home_win_prob": 0.8716,
    "notes": [],
-   "predicted_at": "2026-11-05T19:13-06:00",
+   "predicted_at": "2026-11-08T14:44-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -409,18 +409,25 @@
    "kickoff_ct": "2026-11-08T15:25:00-06:00",
    "home_team": "SEA",
    "away_team": "ARI",
-   "home_qb": "Sam Darnold",
+   "home_qb": "Drew Lock",
    "away_qb": "Gardner Minshew II",
-   "home_qb_flags": [],
+   "home_qb_flags": [
+    "Sam Darnold unavailable (Out)",
+    "backup QB projected to start",
+    "QB change from last game (Sam Darnold)"
+   ],
    "away_qb_flags": [
     "QB change from last game (Jacoby Brissett)"
    ],
-   "pred_margin": 7.55,
-   "home_win_prob": 0.719,
+   "pred_margin": 5.94,
+   "home_win_prob": 0.6759,
    "notes": [
+    "SEA: Sam Darnold unavailable (Out)",
+    "SEA: backup QB projected to start",
+    "SEA: QB change from last game (Sam Darnold)",
     "ARI: QB change from last game (Jacoby Brissett)"
    ],
-   "predicted_at": "2026-11-05T19:13-06:00",
+   "predicted_at": "2026-11-08T14:44-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -437,10 +444,10 @@
    "away_qb": "Jordan Love",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": 4.29,
-   "home_win_prob": 0.6292,
+   "pred_margin": 4.32,
+   "home_win_prob": 0.6301,
    "notes": [],
-   "predicted_at": "2026-11-05T19:13-06:00",
+   "predicted_at": "2026-11-08T14:44-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -457,10 +464,10 @@
    "away_qb": "Baker Mayfield",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": 5.31,
-   "home_win_prob": 0.6584,
+   "pred_margin": 5.38,
+   "home_win_prob": 0.6602,
    "notes": [],
-   "predicted_at": "2026-11-05T19:13-06:00",
+   "predicted_at": "2026-11-08T14:44-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -473,14 +480,22 @@
    "kickoff_ct": "2026-11-09T19:15:00-06:00",
    "home_team": "MIN",
    "away_team": "BUF",
-   "home_qb": "Kyler Murray",
+   "home_qb": "Carson Wentz",
    "away_qb": "Josh Allen",
-   "home_qb_flags": [],
+   "home_qb_flags": [
+    "Kyler Murray unavailable (Out)",
+    "backup QB projected to start",
+    "QB change from last game (Kyler Murray)"
+   ],
    "away_qb_flags": [],
-   "pred_margin": -1.87,
-   "home_win_prob": 0.443,
-   "notes": [],
-   "predicted_at": "2026-11-05T19:13-06:00",
+   "pred_margin": -3.77,
+   "home_win_prob": 0.3859,
+   "notes": [
+    "MIN: Kyler Murray unavailable (Out)",
+    "MIN: backup QB projected to start",
+    "MIN: QB change from last game (Kyler Murray)"
+   ],
+   "predicted_at": "2026-11-08T14:44-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
