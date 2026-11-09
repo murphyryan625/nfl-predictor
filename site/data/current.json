@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-08T14:44-06:00",
+ "generated_at": "2026-11-09T17:14-06:00",
  "season": 2026,
  "week": 9,
  "teams": {
@@ -231,8 +231,8 @@
    ],
    "predicted_at": "2026-11-05T19:13-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 23.0,
+   "away_score": 22.0
   },
   {
    "game_id": "2026_09_DAL_IND",
@@ -253,8 +253,8 @@
    ],
    "predicted_at": "2026-11-05T19:13-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 23.0,
+   "away_score": 27.0
   },
   {
    "game_id": "2026_09_DEN_CAR",
@@ -273,8 +273,8 @@
    "notes": [],
    "predicted_at": "2026-11-05T19:13-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 21.0,
+   "away_score": 26.0
   },
   {
    "game_id": "2026_09_DET_MIA",
@@ -293,8 +293,8 @@
    "notes": [],
    "predicted_at": "2026-11-05T19:13-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 9.0,
+   "away_score": 19.0
   },
   {
    "game_id": "2026_09_LA_WAS",
@@ -313,8 +313,8 @@
    "notes": [],
    "predicted_at": "2026-11-05T19:13-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 13.0,
+   "away_score": 20.0
   },
   {
    "game_id": "2026_09_NYG_PHI",
@@ -338,8 +338,8 @@
    ],
    "predicted_at": "2026-11-05T19:13-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 11.0,
+   "away_score": 19.0
   },
   {
    "game_id": "2026_09_NYJ_KC",
@@ -358,8 +358,8 @@
    "notes": [],
    "predicted_at": "2026-11-05T19:13-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 35.0,
+   "away_score": 12.0
   },
   {
    "game_id": "2026_09_HOU_LAC",
@@ -378,8 +378,8 @@
    "notes": [],
    "predicted_at": "2026-11-08T14:44-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 22.0,
+   "away_score": 44.0
   },
   {
    "game_id": "2026_09_LV_SF",
@@ -398,8 +398,8 @@
    "notes": [],
    "predicted_at": "2026-11-08T14:44-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 38.0,
+   "away_score": 17.0
   },
   {
    "game_id": "2026_09_ARI_SEA",
@@ -429,8 +429,8 @@
    ],
    "predicted_at": "2026-11-08T14:44-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 17.0,
+   "away_score": 3.0
   },
   {
    "game_id": "2026_09_GB_NE",
@@ -449,8 +449,8 @@
    "notes": [],
    "predicted_at": "2026-11-08T14:44-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 27.0,
+   "away_score": 45.0
   },
   {
    "game_id": "2026_09_TB_CHI",
@@ -469,8 +469,8 @@
    "notes": [],
    "predicted_at": "2026-11-08T14:44-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 27.0,
+   "away_score": 24.0
   },
   {
    "game_id": "2026_09_BUF_MIN",
