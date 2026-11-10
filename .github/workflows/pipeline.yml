@@ -1,17 +1,20 @@
 name: NFL pipeline
 
-# GitHub cron is always UTC and doesn't know about daylight saving time, so each job has two
-# lines: one for Sep-Oct (Central Daylight Time = UTC-5) and one for Nov-Feb (Central Standard = UTC-6).
+# GitHub starts scheduled runs LATE, and not by a little: in the first two weeks of Nov 2026 every run
+# started 4-9 hours after its cron time (the "Sunday 10:40 AM" refresh ran at 2:44 PM, after the noon
+# games had kicked off). A run is cheap (~2 min) and repeating it is harmless: predictions freeze at
+# kickoff, so a later run only updates games that haven't started. So each job is scheduled several
+# times, hours apart, and whichever attempts land before kickoff do the work.
+# Times are UTC (Central = UTC-5 Sep-Oct, UTC-6 Nov-Feb). Minute 17/47 avoids the top-of-hour rush.
+# The LAST field (weekday) picks the command: 2 = Tue -> full, 1 = Mon -> score, anything else -> refresh.
 on:
   schedule:
-    - cron: "0 13 * 9,10 2"          # Tue  8:00 AM CDT  -> full
-    - cron: "0 14 * 1,2,11,12 2"     # Tue  8:00 AM CST  -> full
-    - cron: "0 20 * 9,10 4"          # Thu  3:00 PM CDT  -> refresh (before TNF)
-    - cron: "0 21 * 1,2,11,12 4"     # Thu  3:00 PM CST  -> refresh
-    - cron: "40 15 * 9,10 0"         # Sun 10:40 AM CDT  -> refresh (after inactives for noon games)
-    - cron: "40 16 * 1,2,11,12 0"    # Sun 10:40 AM CST  -> refresh
-    - cron: "0 13 * 9,10 1"          # Mon  8:00 AM CDT  -> score
-    - cron: "0 14 * 1,2,11,12 1"     # Mon  8:00 AM CST  -> score
+    - cron: "17 10,14 * 1,2,9-12 2"       # Tue ~5 AM & ~9 AM CT      -> full (new week: retrain, predict)
+    - cron: "17 12,16,20 * 1,2,9-12 4"    # Thu ~7 AM, 11 AM, 3 PM CT -> refresh (before Thursday night)
+    - cron: "17 3,15 * 1,2,9-12 6"        # Fri night & Sat ~10 AM CT -> refresh (Friday's final injury report; Saturday games)
+    - cron: "17 9,12,15 * 1,2,9-12 0"     # Sun ~4 AM, 7 AM, 10 AM CT -> refresh (before the noon games)
+    - cron: "47 16 * 1,2,9-12 0"          # Sun ~11 AM CT             -> refresh (after inactives, if it runs on time)
+    - cron: "17 12,18 * 1,2,9-12 1"       # Mon ~7 AM & ~1 PM CT      -> score
   workflow_dispatch:
     inputs:
       command:

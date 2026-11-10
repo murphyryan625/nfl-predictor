@@ -56,12 +56,20 @@ cd site; ..\.venv\Scripts\python -m http.server 8000   # then open http://localh
 
 `.github/workflows/pipeline.yml` runs on this schedule (all Central Time, Sept–Feb):
 
-| When | Command | Why |
+| When (scheduled attempts) | Command | Why |
 |---|---|---|
-| Tue 8:00 AM | `full` | week is set; refresh all data, retrain, predict, publish |
-| Thu 3:00 PM | `refresh` | latest injury report/QB status before Thursday Night Football |
-| Sun 10:40 AM | `refresh` | after inactives for the noon games |
-| Mon 8:00 AM | `score` | score Sunday's games into the track record |
+| Tue ~5 AM, ~9 AM | `full` | week is set; refresh all data, retrain, predict, publish |
+| Thu ~7 AM, ~11 AM, ~3 PM | `refresh` | latest injury report/QB status before Thursday Night Football |
+| Fri night, Sat ~10 AM | `refresh` | Friday's final injury report (Out/Doubtful); Saturday games late in the season |
+| Sun ~4 AM, ~7 AM, ~10 AM, ~11 AM | `refresh` | last update before the noon games |
+| Mon ~7 AM, ~1 PM | `score` | score Sunday's games into the track record |
+
+**Why several attempts per job:** GitHub starts scheduled workflows late — in early Nov 2026 every run
+started 4–9 hours after its cron time, so the single "Sunday 10:40 AM" refresh actually ran at 2:44 PM,
+after the noon games had kicked off. Repeating a run is harmless (predictions freeze at kickoff and a run
+takes ~2 minutes), so each job is scheduled a few times, hours apart, and whichever attempts land before
+kickoff do the work. If you need a run at an exact time, trigger it yourself (below) — manual runs start
+immediately.
 
 You can also run it by hand: GitHub → **Actions** → **NFL pipeline** → **Run workflow**, or
 `gh workflow run pipeline.yml -f command=full`.
@@ -71,13 +79,12 @@ in the Actions tab, GitHub emails you, the workflow opens an issue on the repo, 
 shows a warning banner if it hasn't updated in 8 days.
 
 ### Changing the schedule
-Cron times are **UTC** and GitHub doesn't adjust for daylight saving, so each job has two lines:
-months `9,10` use Central Daylight (UTC−5) and `11,12,1,2` use Central Standard (UTC−6).
-To move a run, change the hour on both lines: CT hour + 5 for the Sep–Oct line, + 6 for the Nov–Feb line.
-Example: Thursday 2 PM CT → `"0 19 * 9,10 4"` and `"0 20 * 1,2,11,12 4"`. The last field is the weekday
-(0 = Sunday). Daylight time ends on the first Sunday of November, so in years when that's later than
-Nov 1, runs in those few days fire an hour early. Also, GitHub's scheduled runs are often 5–30
-minutes late at busy times.
+Cron times are **UTC** and GitHub doesn't adjust for daylight saving: Central is UTC−5 in Sep–Oct and
+UTC−6 in Nov–Feb, so the "CT" times above are an hour later on the clock in Sep–Oct. Given how late
+GitHub starts runs, that hour doesn't matter. Each line is `minute hours day-of-month months weekday`;
+the **weekday** (last field, 0 = Sunday) decides the command: 2 (Tue) → `full`, 1 (Mon) → `score`,
+anything else → `refresh`. To add an attempt, add an hour to the list, e.g. Thursday
+`"17 12,16,20,22 * 1,2,9-12 4"`.
 
 ## Retraining
 
@@ -90,6 +97,15 @@ games. To change the model:
 3. Keep the change only if out-of-sample Brier/log loss improve, then commit and push.
 
 To add a candidate model to the backtest, add it to `candidate_models()` in `nflpred/report.py`.
+
+**Already tried (Nov 2026) — none moved out-of-sample Brier by more than ±0.0003, which is noise over
+4,363 games, so the model was left as is:** opponent-adjusted team ratings; rating half-lives from 4 to 20
+games and other prior weights/regression; a points-scored/allowed rating; Elo K and season regression;
+QB shrinkage, half-life and replacement level; ridge alpha 1–300; rescaling σ; blending ridge with
+gradient boosting or the logistic model; and new play-by-play stats (EPA capped per play to mute
+turnover luck, garbage-time down-weighting, special-teams EPA, explosive-play rate, early-down success,
+sack rate, turnovers). The remaining gap to the betting market is mostly information this model doesn't
+have (non-QB injuries, coaching and roster changes), not tuning.
 
 ## Caveats
 - The backtest uses the QB who actually started (known at kickoff). Tuesday predictions use a

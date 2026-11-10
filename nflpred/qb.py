@@ -62,6 +62,8 @@ def project_starters(season: int, week: int, teams: list[str], schedule: pd.Data
       1. Latest depth chart QB1/QB2/QB3 for the team.
       2. Drop anyone listed Out/Doubtful on this week's injury report or on IR/inactive rosters.
       3. If the depth chart is missing, fall back to last game's starter.
+      4. Before this week's injury report is posted (Tuesday), flag a projected starter who was
+         Out/Doubtful last week — the depth chart still lists him, but his status is unknown.
     Flags tell the dashboard when something is off (backup starting, QB1 questionable, change from last week).
     """
     import nflreadpy as nfl
@@ -86,6 +88,13 @@ def project_starters(season: int, week: int, teams: list[str], schedule: pd.Data
         latest = depth.groupby("team")["dt"].transform("max")
         depth = depth[depth["dt"] == latest].sort_values(["team", "pos_rank"])
     inj_wk = inj[(inj.get("week") == week) & (inj.get("position") == "QB")] if not inj.empty else inj
+    # Early in the week (the Tuesday run) this week's injury report doesn't exist yet. Until it does,
+    # a QB who was Out/Doubtful last week is an open question, so remember last week's statuses.
+    report_posted = (not inj.empty) and bool((inj["week"] == week).any())
+    prev_status: dict[str, str] = {}
+    if not inj.empty and not report_posted:
+        prev = inj[(inj["week"] == week - 1) & (inj["position"] == "QB") & inj["report_status"].isin(UNAVAILABLE)]
+        prev_status = dict(zip(prev["gsis_id"], prev["report_status"]))
     ros_wk = ros[ros.get("week") == ros["week"].max()] if not ros.empty else ros
 
     played = schedule[(schedule.season == season) & schedule.home_score.notna()]
@@ -122,6 +131,8 @@ def project_starters(season: int, week: int, teams: list[str], schedule: pd.Data
                 continue
             if status == "Questionable":
                 flags.append(f"{name} questionable")
+            elif pid in prev_status:
+                flags.append(f"{name} was {prev_status[pid].lower()} last week — this week's injury report isn't out yet")
             starter = (pid, name)
             if i > 0:
                 flags.append("backup QB projected to start")

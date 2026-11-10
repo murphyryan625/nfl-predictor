@@ -22,9 +22,15 @@ def kickoff_central(gameday, gametime) -> dt.datetime:
     return et.astimezone(CENTRAL)
 
 
-def upcoming_week(schedule: pd.DataFrame, season: int) -> tuple[int, pd.DataFrame]:
-    """The earliest week of `season` that still has unplayed games."""
+def upcoming_week(schedule: pd.DataFrame, season: int, today: dt.date | None = None) -> tuple[int, pd.DataFrame]:
+    """The earliest week of `season` that still has unplayed games.
+
+    A game dated 3+ days ago that still has no score was cancelled or never got a result; it is
+    ignored here so it can't pin the dashboard to an old week for the rest of the season.
+    """
     left = schedule[(schedule.season == season) & schedule.home_score.isna()]
+    cutoff = pd.Timestamp(today or dt.datetime.now(CENTRAL).date()) - pd.Timedelta(days=3)
+    left = left[left.gameday > cutoff]
     if left.empty:
         return -1, left
     week = int(left.week.min())
@@ -37,7 +43,7 @@ def predict_upcoming(season: int, schedule: pd.DataFrame, team_games: pd.DataFra
     if week < 0:
         print("No upcoming games this season.")
         return pd.DataFrame()
-    pending = games[games.home_score.isna()]
+    pending = games[games.home_score.isna() & (games.gameday >= pd.Timestamp(dt.datetime.now(CENTRAL).date()))]
     teams = sorted(set(pending.home_team) | set(pending.away_team))
     print(f"Predicting {season} week {week}: {len(pending)} games")
 
