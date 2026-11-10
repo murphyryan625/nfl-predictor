@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-11-09T17:14-06:00",
+ "generated_at": "2026-11-10T14:42-06:00",
  "summary": {
   "all": {
-   "games": 135,
-   "wins": 93,
+   "games": 136,
+   "wins": 94,
    "losses": 41,
-   "brier": 0.2098,
-   "spread_mae": 9.51
+   "brier": 0.2093,
+   "spread_mae": 9.54
   },
   "live_only": {
-   "games": 16,
-   "wins": 14,
+   "games": 17,
+   "wins": 15,
    "losses": 2,
-   "brier": 0.1439,
-   "spread_mae": 8.51
+   "brier": 0.1442,
+   "spread_mae": 8.78
   }
  },
  "weekly": [
@@ -108,12 +108,12 @@
   {
    "season": 2026,
    "week": 9,
-   "games": 14,
-   "wins": 13,
+   "games": 15,
+   "wins": 14,
    "losses": 1,
-   "brier": 0.1387,
-   "spread_mae": 7.8,
-   "running_brier": 0.2098,
+   "brier": 0.1394,
+   "spread_mae": 8.16,
+   "running_brier": 0.2093,
    "live": true
   }
  ],
@@ -508,6 +508,40 @@
    "correct": 1.0,
    "spread_error": 2.38,
    "brier": 0.11546403999999999
+  },
+  {
+   "game_id": "2026_09_BUF_MIN",
+   "season": 2026,
+   "week": 9,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-09T19:15:00-06:00",
+   "home_team": "MIN",
+   "away_team": "BUF",
+   "home_qb": "Carson Wentz",
+   "away_qb": "Josh Allen",
+   "home_qb_flags": [
+    "Kyler Murray unavailable (Out)",
+    "backup QB projected to start",
+    "QB change from last game (Kyler Murray)"
+   ],
+   "away_qb_flags": [],
+   "pred_margin": -3.77,
+   "home_win_prob": 0.3859,
+   "notes": [
+    "MIN: Kyler Murray unavailable (Out)",
+    "MIN: backup QB projected to start",
+    "MIN: QB change from last game (Kyler Murray)"
+   ],
+   "predicted_at": "2026-11-08T14:44-06:00",
+   "run": "refresh",
+   "home_score": 6.0,
+   "away_score": 23.0,
+   "margin": -17.0,
+   "pick": "BUF",
+   "pick_prob": 0.6141,
+   "correct": 1.0,
+   "spread_error": 13.23,
+   "brier": 0.14891881
   },
   {
    "game_id": "2026_08_CAR_GB",
