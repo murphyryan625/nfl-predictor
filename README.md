@@ -54,15 +54,16 @@ cd site; ..\.venv\Scripts\python -m http.server 8000   # then open http://localh
 
 ## Automation
 
-`.github/workflows/pipeline.yml` runs on this schedule (all Central Time, Sept–Feb):
+`.github/workflows/pipeline.yml` runs on this schedule, Sept–Feb. Times are Central Standard Time
+(Nov–Feb); in Sep–Oct, during daylight time, each attempt is one hour later on the clock:
 
-| When (scheduled attempts) | Command | Why |
+| When (scheduled attempts, CST) | Command | Why |
 |---|---|---|
-| Tue ~5 AM, ~9 AM | `full` | week is set; refresh all data, retrain, predict, publish |
-| Thu ~7 AM, ~11 AM, ~3 PM | `refresh` | latest injury report/QB status before Thursday Night Football |
-| Fri night, Sat ~10 AM | `refresh` | Friday's final injury report (Out/Doubtful); Saturday games late in the season |
-| Sun ~4 AM, ~7 AM, ~10 AM, ~11 AM | `refresh` | last update before the noon games |
-| Mon ~7 AM, ~1 PM | `score` | score Sunday's games into the track record |
+| Tue 4:17 AM, 8:17 AM | `full` | week is set; refresh all data, retrain, predict, publish |
+| Thu 6:17 AM, 10:17 AM, 2:17 PM | `refresh` | latest injury report/QB status before Thursday Night Football |
+| Fri 9:17 PM, Sat 9:17 AM | `refresh` | Friday's final injury report (Out/Doubtful); Saturday games late in the season |
+| Sun 3:17 AM, 6:17 AM, 9:17 AM, 10:47 AM | `refresh` | last update before the noon games |
+| Mon 6:17 AM, 12:17 PM | `score` | score Sunday's games into the track record |
 
 **Why several attempts per job:** GitHub starts scheduled workflows late — in early Nov 2026 every run
 started 4–9 hours after its cron time, so the single "Sunday 10:40 AM" refresh actually ran at 2:44 PM,
@@ -80,8 +81,8 @@ shows a warning banner if it hasn't updated in 8 days.
 
 ### Changing the schedule
 Cron times are **UTC** and GitHub doesn't adjust for daylight saving: Central is UTC−5 in Sep–Oct and
-UTC−6 in Nov–Feb, so the "CT" times above are an hour later on the clock in Sep–Oct. Given how late
-GitHub starts runs, that hour doesn't matter. Each line is `minute hours day-of-month months weekday`;
+UTC−6 in Nov–Feb, so the CST times above are an hour later on the clock in Sep–Oct (CST = UTC hour − 6).
+Given how late GitHub starts runs, that hour doesn't matter. Each line is `minute hours day-of-month months weekday`;
 the **weekday** (last field, 0 = Sunday) decides the command: 2 (Tue) → `full`, 1 (Mon) → `score`,
 anything else → `refresh`. To add an attempt, add an hour to the list, e.g. Thursday
 `"17 12,16,20,22 * 1,2,9-12 4"`.

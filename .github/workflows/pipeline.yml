@@ -5,16 +5,17 @@ name: NFL pipeline
 # games had kicked off). A run is cheap (~2 min) and repeating it is harmless: predictions freeze at
 # kickoff, so a later run only updates games that haven't started. So each job is scheduled several
 # times, hours apart, and whichever attempts land before kickoff do the work.
-# Times are UTC (Central = UTC-5 Sep-Oct, UTC-6 Nov-Feb). Minute 17/47 avoids the top-of-hour rush.
+# Cron times are UTC. The Central times in the comments are for Nov-Feb (CST = UTC-6); in Sep-Oct
+# (CDT = UTC-5) the same cron fires one hour later on the clock. Minute 17/47 avoids the top-of-hour rush.
 # The LAST field (weekday) picks the command: 2 = Tue -> full, 1 = Mon -> score, anything else -> refresh.
 on:
   schedule:
-    - cron: "17 10,14 * 1,2,9-12 2"       # Tue ~5 AM & ~9 AM CT      -> full (new week: retrain, predict)
-    - cron: "17 12,16,20 * 1,2,9-12 4"    # Thu ~7 AM, 11 AM, 3 PM CT -> refresh (before Thursday night)
-    - cron: "17 3,15 * 1,2,9-12 6"        # Fri night & Sat ~10 AM CT -> refresh (Friday's final injury report; Saturday games)
-    - cron: "17 9,12,15 * 1,2,9-12 0"     # Sun ~4 AM, 7 AM, 10 AM CT -> refresh (before the noon games)
-    - cron: "47 16 * 1,2,9-12 0"          # Sun ~11 AM CT             -> refresh (after inactives, if it runs on time)
-    - cron: "17 12,18 * 1,2,9-12 1"       # Mon ~7 AM & ~1 PM CT      -> score
+    - cron: "17 10,14 * 1,2,9-12 2"       # Tue 4:17 AM, 8:17 AM CST           -> full (new week: retrain, predict)
+    - cron: "17 12,16,20 * 1,2,9-12 4"    # Thu 6:17 AM, 10:17 AM, 2:17 PM CST -> refresh (before Thursday night)
+    - cron: "17 3,15 * 1,2,9-12 6"        # Fri 9:17 PM, Sat 9:17 AM CST       -> refresh (Friday's final injury report; Saturday games)
+    - cron: "17 9,12,15 * 1,2,9-12 0"     # Sun 3:17 AM, 6:17 AM, 9:17 AM CST  -> refresh (before the noon games)
+    - cron: "47 16 * 1,2,9-12 0"          # Sun 10:47 AM CST                   -> refresh (after inactives, if it runs on time)
+    - cron: "17 12,18 * 1,2,9-12 1"       # Mon 6:17 AM, 12:17 PM CST          -> score
   workflow_dispatch:
     inputs:
       command:
