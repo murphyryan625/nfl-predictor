@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T14:42-06:00",
+ "generated_at": "2026-11-11T19:01-06:00",
  "season": 2026,
  "week": 10,
  "teams": {
@@ -177,13 +177,13 @@
    "away_qb": "Jayden Daniels",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": 0.57,
-   "home_win_prob": 0.5174,
+   "pred_margin": 0.56,
+   "home_win_prob": 0.5173,
    "notes": [
     "Toss-up"
    ],
-   "predicted_at": "2026-11-10T14:42-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-11T19:01-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -205,8 +205,8 @@
     "Toss-up",
     "Neutral site (no home field)"
    ],
-   "predicted_at": "2026-11-10T14:42-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-11T19:01-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -225,8 +225,8 @@
    "pred_margin": -9.53,
    "home_win_prob": 0.2318,
    "notes": [],
-   "predicted_at": "2026-11-10T14:42-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-11T19:01-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -245,8 +245,8 @@
    "pred_margin": 1.64,
    "home_win_prob": 0.5503,
    "notes": [],
-   "predicted_at": "2026-11-10T14:42-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-11T19:01-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -269,8 +269,8 @@
    "notes": [
     "CLE: QB change from last game (Shedeur Sanders)"
    ],
-   "predicted_at": "2026-11-10T14:42-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-11T19:01-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -289,8 +289,8 @@
    "pred_margin": -9.3,
    "home_win_prob": 0.2373,
    "notes": [],
-   "predicted_at": "2026-11-10T14:42-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-11T19:01-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -309,8 +309,8 @@
    "pred_margin": -4.25,
    "home_win_prob": 0.3718,
    "notes": [],
-   "predicted_at": "2026-11-10T14:42-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-11T19:01-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -323,14 +323,19 @@
    "home_team": "IND",
    "away_team": "MIA",
    "home_qb": "Daniel Jones",
-   "away_qb": "Malik Willis",
+   "away_qb": "Kyle McCord",
    "home_qb_flags": [],
-   "away_qb_flags": [],
-   "pred_margin": 4.03,
-   "home_win_prob": 0.6217,
-   "notes": [],
-   "predicted_at": "2026-11-10T14:42-06:00",
-   "run": "full",
+   "away_qb_flags": [
+    "QB change from last game (Malik Willis)"
+   ],
+   "pred_margin": 6.61,
+   "home_win_prob": 0.6944,
+   "notes": [
+    "MIA: QB change from last game (Malik Willis)",
+    "MIA: starter has no NFL dropbacks \u2014 rated as replacement level"
+   ],
+   "predicted_at": "2026-11-11T19:01-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -343,18 +348,19 @@
    "home_team": "GB",
    "away_team": "MIN",
    "home_qb": "Jordan Love",
-   "away_qb": "Kyler Murray",
+   "away_qb": "Kirk Cousins",
    "home_qb_flags": [],
    "away_qb_flags": [
     "QB change from last game (Carson Wentz)"
    ],
-   "pred_margin": 2.0,
-   "home_win_prob": 0.5612,
+   "pred_margin": 1.62,
+   "home_win_prob": 0.5495,
    "notes": [
-    "MIN: QB change from last game (Carson Wentz)"
+    "MIN: QB change from last game (Carson Wentz)",
+    "Toss-up"
    ],
-   "predicted_at": "2026-11-10T14:42-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-11T19:01-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -366,15 +372,20 @@
    "kickoff_ct": "2026-11-15T15:05:00-06:00",
    "home_team": "ARI",
    "away_team": "LA",
-   "home_qb": "Gardner Minshew II",
+   "home_qb": "Carson Beck",
    "away_qb": "Matthew Stafford",
-   "home_qb_flags": [],
+   "home_qb_flags": [
+    "QB change from last game (Gardner Minshew)"
+   ],
    "away_qb_flags": [],
-   "pred_margin": -7.72,
-   "home_win_prob": 0.2764,
-   "notes": [],
-   "predicted_at": "2026-11-10T14:42-06:00",
-   "run": "full",
+   "pred_margin": -9.88,
+   "home_win_prob": 0.2235,
+   "notes": [
+    "ARI: QB change from last game (Gardner Minshew)",
+    "ARI: starter has no NFL dropbacks \u2014 rated as replacement level"
+   ],
+   "predicted_at": "2026-11-11T19:01-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -386,19 +397,23 @@
    "kickoff_ct": "2026-11-15T15:05:00-06:00",
    "home_team": "LV",
    "away_team": "SEA",
-   "home_qb": "Kirk Cousins",
+   "home_qb": "Fernando Mendoza",
    "away_qb": "Sam Darnold",
-   "home_qb_flags": [],
+   "home_qb_flags": [
+    "QB change from last game (Kirk Cousins)"
+   ],
    "away_qb_flags": [
     "QB change from last game (Drew Lock)"
    ],
-   "pred_margin": -5.67,
-   "home_win_prob": 0.3314,
+   "pred_margin": -10.46,
+   "home_win_prob": 0.2104,
    "notes": [
+    "LV: QB change from last game (Kirk Cousins)",
+    "LV: starter has limited NFL history",
     "SEA: QB change from last game (Drew Lock)"
    ],
-   "predicted_at": "2026-11-10T14:42-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-11T19:01-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -417,8 +432,8 @@
    "pred_margin": -6.41,
    "home_win_prob": 0.3108,
    "notes": [],
-   "predicted_at": "2026-11-10T14:42-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-11T19:01-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -437,8 +452,8 @@
    "pred_margin": 2.11,
    "home_win_prob": 0.5644,
    "notes": [],
-   "predicted_at": "2026-11-10T14:42-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-11T19:01-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -461,8 +476,8 @@
    "notes": [
     "BAL: QB change from last game (Joe Fagnano)"
    ],
-   "predicted_at": "2026-11-10T14:42-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-11T19:01-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   }
