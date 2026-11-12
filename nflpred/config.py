@@ -32,3 +32,8 @@ RIDGE_ALPHA = 10.0
 
 # --- dashboard ---
 TIMEZONE = "America/Chicago"
+
+# --- personal Streamlit dashboard ---
+# Each run also drops this week's picks here as predictions.csv ("My Model Picks").
+# Skipped when the folder doesn't exist (e.g. on GitHub Actions).
+DASHBOARD_DIR = Path.home() / "Documents" / "my-dashboard"

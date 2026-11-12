@@ -35,6 +35,11 @@ nflverse data ─▶ cached summaries ─▶ pregame features ─▶ ridge model
 5. **Ledger** (`data/predictions.csv`) — every run writes predictions for games that haven't kicked off;
    once a game starts its prediction is frozen. Scores are filled in after games finish.
 6. **Site** (`site/`) — plain HTML/CSS/JS reading `site/data/current.json` and `history.json`.
+7. **Picks CSV** (`nflpred/export.py`) — every `full` / `refresh` / `score` run also writes this week's picks
+   as a small readable table: `site/data/picks.csv` (published with the site) and, when the folder exists,
+   `~\Documents\my-dashboard\predictions.csv` for the "My Model Picks" table in the personal Streamlit
+   dashboard (`DASHBOARD_DIR` in `config.py`). `python run.py export` rewrites both from the ledger
+   without downloading or re-predicting.
 
 ## Run locally (PowerShell)
 

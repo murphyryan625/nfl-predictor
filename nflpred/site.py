@@ -13,6 +13,7 @@ import pandas as pd
 
 from .config import SITE_DATA
 from .data import TEAM_FIX
+from .export import write_picks
 from .predict import upcoming_week, CENTRAL
 from .track import load_ledger
 
@@ -45,17 +46,24 @@ def _records(df: pd.DataFrame) -> list[dict]:
     return [{k: _clean(v) for k, v in r.items()} for r in df.to_dict("records")]
 
 
+def current_week_games(schedule: pd.DataFrame, ledger: pd.DataFrame):
+    """(season, week, ledger rows for the week the dashboard shows)."""
+    season = int(schedule.season.max())
+    week, _ = upcoming_week(schedule, season)
+    if week < 0 and not ledger.empty:              # season over: show the last predicted week
+        week = int(ledger[ledger.season == season].week.max())
+    cur = ledger[(ledger.season == season) & (ledger.week == week)] if not ledger.empty else ledger
+    return season, week, cur
+
+
 def build_site(schedule: pd.DataFrame) -> None:
     SITE_DATA.mkdir(parents=True, exist_ok=True)
     ledger = load_ledger()
     now = dt.datetime.now(CENTRAL).isoformat(timespec="minutes")
-    season = int(schedule.season.max())
-    week, _ = upcoming_week(schedule, season)
 
     # ---------------- current week ----------------
-    if week < 0 and not ledger.empty:              # season over: show the last predicted week
-        week = int(ledger[ledger.season == season].week.max())
-    cur = ledger[(ledger.season == season) & (ledger.week == week)] if not ledger.empty else ledger
+    season, week, cur = current_week_games(schedule, ledger)
+    write_picks(cur)
     current = {
         "generated_at": now, "season": season, "week": week,
         "teams": _teams(),

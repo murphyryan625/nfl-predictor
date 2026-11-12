@@ -4,6 +4,10 @@
     python run.py full       # Tuesday: refresh data, predict the upcoming week, build the site
     python run.py refresh    # Thu/Sun: same as full (re-pulls injuries & QB status) — kept separate for clarity in logs
     python run.py score      # Monday: score finished games into the tracking page, rebuild the site
+    python run.py export     # rewrite this week's picks CSVs from the ledger (no downloads, no new predictions)
+
+full / refresh / score also write the picks CSVs (site/data/picks.csv, and predictions.csv in the
+personal dashboard folder when it exists - see nflpred/export.py).
 
 There is no saved model file: training takes about a second, so every run retrains on
 all completed seasons. That means "retrain" happens automatically every run.
@@ -56,6 +60,16 @@ def cmd_score(args):
     build_site(schedule)
 
 
+def cmd_export(args):
+    """Rewrite the picks CSVs from the ledger as it stands. No downloads, no new predictions."""
+    from nflpred.export import write_picks
+    from nflpred.site import current_week_games
+    from nflpred.track import load_ledger
+    _, week, cur = current_week_games(data.load_schedules(), load_ledger())
+    print(f"Exporting week {week}")
+    write_picks(cur)
+
+
 def cmd_backfill(args):
     """One-time: add out-of-sample predictions for this season's finished games to the tracking page."""
     from nflpred.track import backfill
@@ -68,12 +82,12 @@ def cmd_backfill(args):
 def main():
     sys.stdout.reconfigure(encoding="utf-8")  # Windows consoles default to cp1252
     p = argparse.ArgumentParser(description="NFL game predictions")
-    p.add_argument("command", choices=["backtest", "full", "refresh", "score", "backfill"])
+    p.add_argument("command", choices=["backtest", "full", "refresh", "score", "backfill", "export"])
     p.add_argument("--no-refresh", action="store_true", help="use cached data only (no downloads)")
     args = p.parse_args()
     t = time.time()
     {"backtest": cmd_backtest, "full": cmd_predict, "refresh": cmd_predict, "score": cmd_score,
-     "backfill": cmd_backfill}[args.command](args)
+     "backfill": cmd_backfill, "export": cmd_export}[args.command](args)
     print(f"Done in {time.time() - t:.0f}s")
 
 
