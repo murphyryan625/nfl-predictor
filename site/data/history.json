@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-11-12T19:11-06:00",
+ "generated_at": "2026-11-13T16:58-06:00",
  "summary": {
   "all": {
-   "games": 136,
+   "games": 137,
    "wins": 94,
-   "losses": 41,
-   "brier": 0.2093,
-   "spread_mae": 9.54
+   "losses": 42,
+   "brier": 0.2098,
+   "spread_mae": 9.49
   },
   "live_only": {
-   "games": 17,
+   "games": 18,
    "wins": 15,
-   "losses": 2,
-   "brier": 0.1442,
-   "spread_mae": 8.78
+   "losses": 3,
+   "brier": 0.1511,
+   "spread_mae": 8.49
   }
  },
  "weekly": [
@@ -115,9 +115,48 @@
    "spread_mae": 8.16,
    "running_brier": 0.2093,
    "live": true
+  },
+  {
+   "season": 2026,
+   "week": 10,
+   "games": 1,
+   "wins": 0,
+   "losses": 1,
+   "brier": 0.2676,
+   "spread_mae": 3.56,
+   "running_brier": 0.2098,
+   "live": true
   }
  ],
  "games": [
+  {
+   "game_id": "2026_10_WAS_NYG",
+   "season": 2026,
+   "week": 10,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-12T19:15:00-06:00",
+   "home_team": "NYG",
+   "away_team": "WAS",
+   "home_qb": "J.J. McCarthy",
+   "away_qb": "Jayden Daniels",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 0.56,
+   "home_win_prob": 0.5173,
+   "notes": [
+    "Toss-up"
+   ],
+   "predicted_at": "2026-11-12T19:11-06:00",
+   "run": "refresh",
+   "home_score": 21.0,
+   "away_score": 24.0,
+   "margin": -3.0,
+   "pick": "NYG",
+   "pick_prob": 0.5173,
+   "correct": 0.0,
+   "spread_error": 3.56,
+   "brier": 0.26759929
+  },
   {
    "game_id": "2026_09_JAX_BAL",
    "season": 2026,

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T19:11-06:00",
+ "generated_at": "2026-11-13T16:58-06:00",
  "season": 2026,
  "week": 10,
  "teams": {
@@ -184,8 +184,8 @@
    ],
    "predicted_at": "2026-11-12T19:11-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 21.0,
+   "away_score": 24.0
   },
   {
    "game_id": "2026_10_NE_DET",
@@ -200,12 +200,12 @@
    "home_qb_flags": [],
    "away_qb_flags": [],
    "pred_margin": 1.56,
-   "home_win_prob": 0.5476,
+   "home_win_prob": 0.5477,
    "notes": [
     "Toss-up",
     "Neutral site (no home field)"
    ],
-   "predicted_at": "2026-11-12T19:11-06:00",
+   "predicted_at": "2026-11-13T16:58-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -225,7 +225,7 @@
    "pred_margin": -9.53,
    "home_win_prob": 0.2318,
    "notes": [],
-   "predicted_at": "2026-11-12T19:11-06:00",
+   "predicted_at": "2026-11-13T16:58-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -245,7 +245,7 @@
    "pred_margin": 1.64,
    "home_win_prob": 0.5503,
    "notes": [],
-   "predicted_at": "2026-11-12T19:11-06:00",
+   "predicted_at": "2026-11-13T16:58-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -265,11 +265,11 @@
    ],
    "away_qb_flags": [],
    "pred_margin": -1.95,
-   "home_win_prob": 0.4404,
+   "home_win_prob": 0.4405,
    "notes": [
     "CLE: QB change from last game (Shedeur Sanders)"
    ],
-   "predicted_at": "2026-11-12T19:11-06:00",
+   "predicted_at": "2026-11-13T16:58-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -286,10 +286,10 @@
    "away_qb": "Trevor Lawrence",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": -9.3,
+   "pred_margin": -9.29,
    "home_win_prob": 0.2373,
    "notes": [],
-   "predicted_at": "2026-11-12T19:11-06:00",
+   "predicted_at": "2026-11-13T16:58-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -307,9 +307,9 @@
    "home_qb_flags": [],
    "away_qb_flags": [],
    "pred_margin": -4.25,
-   "home_win_prob": 0.3718,
+   "home_win_prob": 0.3719,
    "notes": [],
-   "predicted_at": "2026-11-12T19:11-06:00",
+   "predicted_at": "2026-11-13T16:58-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -334,7 +334,7 @@
     "MIA: QB change from last game (Malik Willis)",
     "MIA: starter has no NFL dropbacks \u2014 rated as replacement level"
    ],
-   "predicted_at": "2026-11-12T19:11-06:00",
+   "predicted_at": "2026-11-13T16:58-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -353,13 +353,13 @@
    "away_qb_flags": [
     "QB change from last game (Carson Wentz)"
    ],
-   "pred_margin": 1.62,
-   "home_win_prob": 0.5495,
+   "pred_margin": 1.61,
+   "home_win_prob": 0.5493,
    "notes": [
     "MIN: QB change from last game (Carson Wentz)",
     "Toss-up"
    ],
-   "predicted_at": "2026-11-12T19:11-06:00",
+   "predicted_at": "2026-11-13T16:58-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -378,13 +378,13 @@
     "QB change from last game (Gardner Minshew)"
    ],
    "away_qb_flags": [],
-   "pred_margin": -9.88,
-   "home_win_prob": 0.2235,
+   "pred_margin": -9.9,
+   "home_win_prob": 0.2232,
    "notes": [
     "ARI: QB change from last game (Gardner Minshew)",
     "ARI: starter has no NFL dropbacks \u2014 rated as replacement level"
    ],
-   "predicted_at": "2026-11-12T19:11-06:00",
+   "predicted_at": "2026-11-13T16:58-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -412,7 +412,7 @@
     "LV: starter has limited NFL history",
     "SEA: QB change from last game (Drew Lock)"
    ],
-   "predicted_at": "2026-11-12T19:11-06:00",
+   "predicted_at": "2026-11-13T16:58-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -429,10 +429,10 @@
    "away_qb": "Brock Purdy",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": -6.41,
-   "home_win_prob": 0.3108,
+   "pred_margin": -6.42,
+   "home_win_prob": 0.3107,
    "notes": [],
-   "predicted_at": "2026-11-12T19:11-06:00",
+   "predicted_at": "2026-11-13T16:58-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -449,10 +449,10 @@
    "away_qb": "Aaron Rodgers",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": 2.11,
-   "home_win_prob": 0.5644,
+   "pred_margin": 2.1,
+   "home_win_prob": 0.5643,
    "notes": [],
-   "predicted_at": "2026-11-12T19:11-06:00",
+   "predicted_at": "2026-11-13T16:58-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -472,11 +472,11 @@
    ],
    "away_qb_flags": [],
    "pred_margin": 6.81,
-   "home_win_prob": 0.6999,
+   "home_win_prob": 0.7,
    "notes": [
     "BAL: QB change from last game (Joe Fagnano)"
    ],
-   "predicted_at": "2026-11-12T19:11-06:00",
+   "predicted_at": "2026-11-13T16:58-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
