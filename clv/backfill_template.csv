@@ -1,0 +1,4 @@
+game_id,bet_type,side,line,price,book,line_ts,stake,track,model_number,model_edge,close_line,close_price,close_opp_price
+2026_09_NYJ_KC,spread,KC,-8.5,-110,DraftKings,2026-11-03T15:00:00+00:00,1,placed,,,-9.5,-110,-110
+2026_09_GB_NE,moneyline,GB,,150,FanDuel,2026-11-03T15:00:00+00:00,1,placed,,,,154,-185
+2026_09_TB_CHI,total,over,46.5,-110,,,1,placed,,,,,

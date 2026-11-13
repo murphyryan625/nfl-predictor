@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NFL Closing Line Value</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Chart series colours: the validated categorical pair (blue, orange), with their own dark-mode steps. */
+  :root { --series-1: #2a78d6; --series-2: #eb6834; }
+  @media (prefers-color-scheme: dark) { :root { --series-1: #3987e5; --series-2: #d95926; } }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: .82rem; color: var(--muted); margin-bottom: 6px; }
+  .legend i { display: inline-block; width: 14px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 5px; }
+  .chart-box { position: relative; }
+  svg.clv { width: 100%; height: 220px; display: block; }
+  .tip { position: absolute; pointer-events: none; background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+         padding: 6px 9px; font-size: .78rem; box-shadow: 0 2px 8px rgba(0,0,0,.15); white-space: nowrap; display: none; }
+  .tip b { font-variant-numeric: tabular-nums; }
+  .note { margin: 0; padding-left: 18px; font-size: .88rem; }
+  .note li + li { margin-top: 4px; }
+  select { font: inherit; padding: 3px 6px; }
+  .pos { color: var(--good); } .neg { color: var(--bad); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Closing line value</h1>
+    <nav><a href="index.html">This week</a><a href="history.html">Track record</a><a href="clv.html" class="active">CLV</a></nav>
+  </header>
+  <div id="status"></div>
+  <p class="sub">Did the picks get a better number than the market's final one? Beating the closing line consistently is the
+    best evidence of a real edge, and it shows up long before the win–loss record can.</p>
+  <label class="toggle" id="track-wrap" style="display:none">Picks: <select id="track"></select></label>
+  <div class="tiles" id="tiles"></div>
+  <h2>Is it real yet?</h2>
+  <div class="card"><ul class="note" id="sample"></ul></div>
+  <h2>Expected vs. actual units</h2>
+  <p class="sub">Expected = what the closing line says these bets were worth (stake × CLV). Actual = what they won or lost.
+    The two converge over a long run; a gap over a short one is variance.</p>
+  <div class="card">
+    <div class="legend"><span><i style="background:var(--series-1)"></i>Expected from CLV</span><span><i style="background:var(--series-2)"></i>Actual result</span></div>
+    <div class="chart-box"><svg class="clv" id="chart" viewBox="0 0 640 220" role="img" aria-label="Cumulative expected and actual units by bet"></svg><div class="tip" id="tip"></div></div>
+  </div>
+  <h2>By bet type</h2><div class="table-wrap"><table id="by-type"></table></div>
+  <h2>By week</h2><div class="table-wrap"><table id="by-week"></table></div>
+  <h2>By size of the model's edge</h2>
+  <p class="sub">If the model is right about where it disagrees most, CLV should rise with edge size.</p>
+  <div class="table-wrap"><table id="by-edge"></table></div>
+  <h2>Every pick</h2><div class="table-wrap"><table id="picks"></table></div>
+  <footer>CLV EV is the expected profit per unit staked if the no-vig closing line is the true price; betting the close
+    itself scores about −2% to −4.5%. Spread CLV accounts for key numbers (a point through 3 is worth about four times a point through 5).
+    Formulas: <code>clv/odds_math.py</code>.</footer>
+</div>
+<script src="app.js"></script>
+<script>
+let DATA;
+const pc = (v, d = 1) => v == null ? "–" : (v >= 0 ? "+" : "−") + Math.abs(v * 100).toFixed(d) + "%";
+const un = v => v == null ? "–" : (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(2);
+const cls = v => v == null || v === 0 ? "" : v > 0 ? "pos" : "neg";
+const odds = v => v == null ? "–" : (v > 0 ? "+" : "−") + Math.abs(v);
+const line = v => v == null ? "" : (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v);
+
+function statRows(rows, label) {
+  return `<tr><th></th><th>Picks</th><th>CLV EV</th><th>CLV pts</th><th>Beat close</th><th>Record</th><th>Units</th><th>Expected</th></tr>` +
+    rows.map(r => `<tr><td>${esc(label(r))}</td><td>${r.n}</td><td class="${cls(r.avg_clv_ev)}">${pc(r.avg_clv_ev)}</td>
+      <td>${r.avg_clv_points == null ? "–" : un(r.avg_clv_points)}</td><td>${r.beat_close_pct == null ? "–" : pct(r.beat_close_pct)}</td>
+      <td>${r.wins}–${r.losses}${r.pushes ? "–" + r.pushes : ""}</td><td class="${cls(r.units)}">${un(r.units)}</td><td>${un(r.expected_units)}</td></tr>`).join("");
+}
+
+function render() {
+  const names = Object.keys(DATA.tracks);
+  const t = DATA.tracks[document.getElementById("track").value] || DATA.tracks[names[0]];
+  if (!t) {
+    document.getElementById("tiles").innerHTML = `<p class="sub">No picks logged yet. They appear after the next pipeline run.</p>`;
+    return;
+  }
+  const s = t.summary;
+  document.getElementById("tiles").innerHTML = `
+    <div class="tile"><div class="k">Average CLV</div><div class="v">${pc(s.avg_clv_ev)}</div><div class="h">expected return per unit</div></div>
+    <div class="tile"><div class="k">Beat the close</div><div class="v">${s.beat_close_pct == null ? "–" : pct(s.beat_close_pct)}</div><div class="h">${s.n_closed} picks with a close</div></div>
+    <div class="tile"><div class="k">Record</div><div class="v">${s.wins}–${s.losses}${s.pushes ? "–" + s.pushes : ""}</div><div class="h">${un(s.units)} units${s.roi == null ? "" : ", ROI " + pc(s.roi)}</div></div>
+    <div class="tile"><div class="k">Expected units</div><div class="v">${un(s.expected_units)}</div><div class="h">vs ${un(s.actual_units)} actual, same bets</div></div>`;
+  document.getElementById("sample").innerHTML = t.sample.notes.map(n => `<li>${esc(n)}</li>`).join("");
+  document.getElementById("by-type").innerHTML = statRows(t.by_type, r => r.key);
+  document.getElementById("by-week").innerHTML = statRows(t.by_week.slice().reverse(), r => `Week ${r.week}`);
+  document.getElementById("by-edge").innerHTML = statRows(t.by_edge, r => r.key);
+  document.getElementById("picks").innerHTML =
+    `<tr><th>Pick</th><th>Took</th><th>Book</th><th>Model edge</th><th>Close</th><th>CLV pts</th><th>CLV EV</th><th>Result</th><th>Units</th></tr>` +
+    t.picks.map(p => {
+      const took = p.bet_type === "moneyline" ? `ML ${odds(p.price)}` : `${p.bet_type === "total" ? p.line : line(p.line)} (${odds(p.price)})`;
+      const close = p.close_source ? (p.bet_type === "moneyline" ? `${odds(p.close_price)} · fair ${pct(p.close_fair_prob)}`
+        : `${p.bet_type === "total" ? p.close_line : line(p.close_line)}${p.close_price == null ? "" : " (" + odds(p.close_price) + ")"}`) : "pending";
+      const edge = p.model_edge == null ? "–" : p.bet_type === "spread" ? `${p.model_edge.toFixed(1)} pts` : pc(p.model_edge);
+      const res = { W: '<span class="result good">W</span>', L: '<span class="result bad">L</span>', P: "Push" }[p.result] || "";
+      return `<tr><td>W${p.week} ${esc(p.away_team)} @ ${esc(p.home_team)}: <b>${esc(p.side)}</b></td><td>${took}</td><td>${esc(p.book)}</td>
+        <td>${edge}</td><td>${close}${p.close_source ? `<span class="tag">${esc(p.close_source)}</span>` : ""}</td>
+        <td>${p.clv_points == null ? "–" : un(p.clv_points)}</td><td class="${cls(p.clv_ev)}">${pc(p.clv_ev)}</td>
+        <td>${res}</td><td class="${cls(p.profit_units)}">${p.result ? un(p.profit_units) : ""}</td></tr>`;
+    }).join("");
+  drawChart(t.timeline);
+}
+
+function drawChart(pts) {
+  const svg = document.getElementById("chart"), tip = document.getElementById("tip");
+  if (!pts.length) {
+    svg.innerHTML = `<text x="320" y="110" text-anchor="middle" font-size="13" fill="currentColor" opacity=".6">Appears once picks have a closing line and a result.</text>`;
+    svg.onpointermove = svg.onpointerleave = null;
+    return;
+  }
+  const W = 640, H = 220, L = 40, R = 14, T = 12, B = 24;
+  const series = [{ k: "cum_clv", c: "var(--series-1)", name: "Expected" }, { k: "cum_units", c: "var(--series-2)", name: "Actual" }];
+  const vals = pts.flatMap(p => [p.cum_clv, p.cum_units]).concat(0);
+  let lo = Math.min(...vals), hi = Math.max(...vals);
+  const padY = Math.max((hi - lo) * 0.12, 0.5); lo -= padY; hi += padY;
+  const x = i => L + (pts.length === 1 ? (W - L - R) / 2 : i * (W - L - R) / (pts.length - 1));
+  const y = v => T + (hi - v) / (hi - lo) * (H - T - B);
+  const step = [0.5, 1, 2, 5, 10, 20, 50].find(s => (hi - lo) / s <= 5) || 100;
+  let grid = "";
+  for (let v = Math.ceil(lo / step) * step; v <= hi; v += step)
+    grid += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-width="${v === 0 ? 1.5 : 1}"/>
+      <text x="${L - 6}" y="${y(v) + 4}" text-anchor="end" font-size="11" fill="var(--muted)">${v > 0 ? "+" : ""}${v}</text>`;
+  const path = k => pts.map((p, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(p[k]).toFixed(1)}`).join("");
+  svg.innerHTML = grid +
+    `<text x="${L}" y="${H - 6}" font-size="11" fill="var(--muted)">first pick</text>
+     <text x="${W - R}" y="${H - 6}" text-anchor="end" font-size="11" fill="var(--muted)">${pts.length} graded picks · units</text>` +
+    series.map(s => `<path d="${path(s.k)}" fill="none" stroke="${s.c}" stroke-width="2" stroke-linejoin="round"/>`).join("") +
+    `<line id="cross" y1="${T}" y2="${H - B}" stroke="var(--muted)" stroke-width="1" visibility="hidden"/>` +
+    series.map(s => `<circle id="dot-${s.k}" r="4.5" fill="${s.c}" stroke="var(--card)" stroke-width="2" visibility="hidden"/>`).join("");
+  svg.onpointermove = e => {
+    const box = svg.getBoundingClientRect();
+    const px = (e.clientX - box.left) / box.width * W;
+    const i = Math.min(pts.length - 1, Math.max(0, Math.round((px - L) / ((W - L - R) / Math.max(pts.length - 1, 1)))));
+    const p = pts[i];
+    const cross = svg.querySelector("#cross");
+    cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("visibility", "visible");
+    for (const s of series) {
+      const d = svg.querySelector("#dot-" + s.k);
+      d.setAttribute("cx", x(i)); d.setAttribute("cy", y(p[s.k])); d.setAttribute("visibility", "visible");
+    }
+    tip.innerHTML = `${esc(p.label)} (pick ${p.n})<br>Expected <b>${un(p.cum_clv)}</b> · Actual <b>${un(p.cum_units)}</b>`;
+    tip.style.display = "block";
+    const left = x(i) / W * box.width;
+    tip.style.left = Math.min(Math.max(left - tip.offsetWidth / 2, 0), box.width - tip.offsetWidth) + "px";
+    tip.style.top = "0px";
+  };
+  svg.onpointerleave = () => {
+    tip.style.display = "none";
+    svg.querySelectorAll("#cross, circle").forEach(n => n.setAttribute("visibility", "hidden"));
+  };
+}
+
+loadJSON("data/clv.json").then(d => {
+  DATA = d;
+  const names = Object.keys(d.tracks), sel = document.getElementById("track");
+  const labels = { model: "Model picks (automatic)", placed: "Bets I placed" };
+  sel.innerHTML = names.map(n => `<option value="${esc(n)}">${esc(labels[n] || n)}</option>`).join("");
+  document.getElementById("track-wrap").style.display = names.length < 2 ? "none" : "";
+  sel.addEventListener("change", render);
+  render();
+}).catch(err => {
+  document.getElementById("tiles").innerHTML = `<div class="banner">No CLV data yet (${esc(err.message)}). It is written by the next pipeline run.</div>`;
+});
+</script>
+</body>
+</html>

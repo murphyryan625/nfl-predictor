@@ -66,6 +66,10 @@ jobs:
           echo "Running: $CMD"
 
       - name: Run pipeline
+        env:
+          # Optional. Repo Settings -> Secrets and variables -> Actions -> New repository secret.
+          # Without it the CLV tracker uses the free nflverse lines.
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python run.py ${{ steps.cmd.outputs.command }}
 
       - name: Commit updated data

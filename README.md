@@ -2,11 +2,14 @@
 
 Win probability and predicted point spread for every upcoming NFL game, published to a
 mobile-friendly dashboard on GitHub Pages and refreshed automatically by GitHub Actions.
-No betting lines or odds are used anywhere.
+No betting lines or odds are used anywhere in the model; a separate tracker compares its picks with the
+market afterwards (see below).
 
 - **This week:** `index.html` — matchups, kickoff (Central Time), win %, spread, QB starter flags, uncertainty notes
 - **Track record:** `history.html` — pick record, spread error, running Brier score by week
 - **Backtest:** [MODEL_REPORT.md](MODEL_REPORT.md)
+- **Closing line value:** `clv.html` — do the model's picks beat the closing line? Setup, workflow and how to
+  read it: [clv/README.md](clv/README.md)
 
 ## How it works
 

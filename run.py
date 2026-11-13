@@ -8,6 +8,7 @@
 
 full / refresh / score also write the picks CSVs (site/data/picks.csv, and predictions.csv in the
 personal dashboard folder when it exists - see nflpred/export.py).
+They also run the Closing Line Value tracker (python -m clv ..., see clv/README.md).
 
 There is no saved model file: training takes about a second, so every run retrains on
 all completed seasons. That means "retrain" happens automatically every run.
@@ -41,6 +42,16 @@ def cmd_backtest(args):
     print(run_report(table, season))
 
 
+def clv_step(stage: str) -> None:
+    """Closing Line Value tracker (clv/README.md). It only reads the ledger the steps above wrote,
+    and a failure here must never stop predictions from being published."""
+    try:
+        from clv.tracker import run
+        run(stage)
+    except Exception as e:
+        print(f"  warning: CLV tracker step failed ({type(e).__name__}: {e})")
+
+
 def cmd_predict(args):
     from nflpred.predict import predict_upcoming
     from nflpred.track import record_predictions, score_results
@@ -50,6 +61,7 @@ def cmd_predict(args):
     record_predictions(preds)
     score_results(schedule)
     build_site(schedule)
+    clv_step("predict")     # log picks at the current line, capture closes, grade
 
 
 def cmd_score(args):
@@ -58,6 +70,7 @@ def cmd_score(args):
     season, schedule, *_ = load_everything(not args.no_refresh)
     score_results(schedule)
     build_site(schedule)
+    clv_step("score")       # capture closes and grade; no new picks
 
 
 def cmd_export(args):
