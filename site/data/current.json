@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-15T10:19-06:00",
+ "generated_at": "2026-11-15T15:18-06:00",
  "season": 2026,
  "week": 10,
  "teams": {
@@ -207,8 +207,8 @@
    ],
    "predicted_at": "2026-11-14T13:55-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 35.0,
+   "away_score": 10.0
   },
   {
    "game_id": "2026_10_BUF_NYJ",
@@ -227,8 +227,8 @@
    "notes": [],
    "predicted_at": "2026-11-15T10:19-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 12.0,
+   "away_score": 31.0
   },
   {
    "game_id": "2026_10_CAR_NO",
@@ -361,8 +361,8 @@
    ],
    "predicted_at": "2026-11-15T10:19-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 10.0,
+   "away_score": 30.0
   },
   {
    "game_id": "2026_10_LA_ARI",
@@ -431,10 +431,10 @@
    "away_qb": "Brock Purdy",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": -6.42,
-   "home_win_prob": 0.3107,
+   "pred_margin": -6.47,
+   "home_win_prob": 0.3095,
    "notes": [],
-   "predicted_at": "2026-11-15T10:19-06:00",
+   "predicted_at": "2026-11-15T15:18-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -451,10 +451,10 @@
    "away_qb": "Aaron Rodgers",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": 2.1,
-   "home_win_prob": 0.5643,
+   "pred_margin": 2.01,
+   "home_win_prob": 0.5614,
    "notes": [],
-   "predicted_at": "2026-11-15T10:19-06:00",
+   "predicted_at": "2026-11-15T15:18-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -473,12 +473,12 @@
     "QB change from last game (Joe Fagnano)"
    ],
    "away_qb_flags": [],
-   "pred_margin": 6.81,
-   "home_win_prob": 0.7,
+   "pred_margin": 6.79,
+   "home_win_prob": 0.6991,
    "notes": [
     "BAL: QB change from last game (Joe Fagnano)"
    ],
-   "predicted_at": "2026-11-15T10:19-06:00",
+   "predicted_at": "2026-11-15T15:18-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null

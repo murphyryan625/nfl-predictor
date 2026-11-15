@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-11-15T10:19-06:00",
+ "generated_at": "2026-11-15T15:18-06:00",
  "summary": {
   "all": {
-   "games": 137,
-   "wins": 94,
-   "losses": 42,
-   "brier": 0.2098,
-   "spread_mae": 9.49
+   "games": 140,
+   "wins": 96,
+   "losses": 43,
+   "brier": 0.2093,
+   "spread_mae": 9.68
   },
   "live_only": {
-   "games": 18,
-   "wins": 15,
-   "losses": 3,
-   "brier": 0.1511,
-   "spread_mae": 8.49
+   "games": 21,
+   "wins": 17,
+   "losses": 4,
+   "brier": 0.1562,
+   "spread_mae": 9.88
   }
  },
  "weekly": [
@@ -119,12 +119,12 @@
   {
    "season": 2026,
    "week": 10,
-   "games": 1,
-   "wins": 0,
-   "losses": 1,
-   "brier": 0.2676,
-   "spread_mae": 3.56,
-   "running_brier": 0.2098,
+   "games": 4,
+   "wins": 2,
+   "losses": 2,
+   "brier": 0.2069,
+   "spread_mae": 14.52,
+   "running_brier": 0.2093,
    "live": true
   }
  ],
@@ -156,6 +156,92 @@
    "correct": 0.0,
    "spread_error": 3.56,
    "brier": 0.26759929
+  },
+  {
+   "game_id": "2026_10_NE_DET",
+   "season": 2026,
+   "week": 10,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-15T08:30:00-06:00",
+   "home_team": "DET",
+   "away_team": "NE",
+   "home_qb": "Jared Goff",
+   "away_qb": "Drake Maye",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 1.56,
+   "home_win_prob": 0.5477,
+   "notes": [
+    "Toss-up",
+    "Neutral site (no home field)"
+   ],
+   "predicted_at": "2026-11-14T13:55-06:00",
+   "run": "refresh",
+   "home_score": 35.0,
+   "away_score": 10.0,
+   "margin": 25.0,
+   "pick": "DET",
+   "pick_prob": 0.5477,
+   "correct": 1.0,
+   "spread_error": 23.44,
+   "brier": 0.20457529000000002
+  },
+  {
+   "game_id": "2026_10_BUF_NYJ",
+   "season": 2026,
+   "week": 10,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-15T12:00:00-06:00",
+   "home_team": "NYJ",
+   "away_team": "BUF",
+   "home_qb": "Geno Smith",
+   "away_qb": "Josh Allen",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": -9.53,
+   "home_win_prob": 0.2318,
+   "notes": [],
+   "predicted_at": "2026-11-15T10:19-06:00",
+   "run": "refresh",
+   "home_score": 12.0,
+   "away_score": 31.0,
+   "margin": -19.0,
+   "pick": "BUF",
+   "pick_prob": 0.7682,
+   "correct": 1.0,
+   "spread_error": 9.47,
+   "brier": 0.05373124
+  },
+  {
+   "game_id": "2026_10_MIN_GB",
+   "season": 2026,
+   "week": 10,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-15T12:00:00-06:00",
+   "home_team": "GB",
+   "away_team": "MIN",
+   "home_qb": "Jordan Love",
+   "away_qb": "Kirk Cousins",
+   "home_qb_flags": [],
+   "away_qb_flags": [
+    "QB change from last game (Carson Wentz)"
+   ],
+   "pred_margin": 1.61,
+   "home_win_prob": 0.5493,
+   "notes": [
+    "MIN: QB change from last game (Carson Wentz)",
+    "Toss-up"
+   ],
+   "predicted_at": "2026-11-15T10:19-06:00",
+   "run": "refresh",
+   "home_score": 10.0,
+   "away_score": 30.0,
+   "margin": -20.0,
+   "pick": "GB",
+   "pick_prob": 0.5493,
+   "correct": 0.0,
+   "spread_error": 21.61,
+   "brier": 0.30173049
   },
   {
    "game_id": "2026_09_JAX_BAL",
