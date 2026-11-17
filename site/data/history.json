@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-11-16T16:05-06:00",
+ "generated_at": "2026-11-17T13:11-06:00",
  "summary": {
   "all": {
-   "games": 149,
+   "games": 150,
    "wins": 103,
-   "losses": 45,
-   "brier": 0.2053,
+   "losses": 46,
+   "brier": 0.2072,
    "spread_mae": 9.62
   },
   "live_only": {
-   "games": 30,
+   "games": 31,
    "wins": 24,
-   "losses": 6,
-   "brier": 0.1526,
-   "spread_mae": 9.49
+   "losses": 7,
+   "brier": 0.1635,
+   "spread_mae": 9.5
   }
  },
  "weekly": [
@@ -119,12 +119,12 @@
   {
    "season": 2026,
    "week": 10,
-   "games": 13,
+   "games": 14,
    "wins": 9,
-   "losses": 4,
-   "brier": 0.1637,
-   "spread_mae": 10.42,
-   "running_brier": 0.2053,
+   "losses": 5,
+   "brier": 0.1869,
+   "spread_mae": 10.37,
+   "running_brier": 0.2072,
    "live": true
   }
  ],
@@ -500,6 +500,36 @@
    "correct": 1.0,
    "spread_error": 17.990000000000002,
    "brier": 0.19236995999999998
+  },
+  {
+   "game_id": "2026_10_LAC_BAL",
+   "season": 2026,
+   "week": 10,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-16T19:15:00-06:00",
+   "home_team": "BAL",
+   "away_team": "LAC",
+   "home_qb": "Jacoby Brissett",
+   "away_qb": "Justin Herbert",
+   "home_qb_flags": [
+    "QB change from last game (Joe Fagnano)"
+   ],
+   "away_qb_flags": [],
+   "pred_margin": 6.79,
+   "home_win_prob": 0.6991,
+   "notes": [
+    "BAL: QB change from last game (Joe Fagnano)"
+   ],
+   "predicted_at": "2026-11-15T15:18-06:00",
+   "run": "refresh",
+   "home_score": 20.0,
+   "away_score": 23.0,
+   "margin": -3.0,
+   "pick": "BAL",
+   "pick_prob": 0.6991,
+   "correct": 0.0,
+   "spread_error": 9.79,
+   "brier": 0.4887408100000001
   },
   {
    "game_id": "2026_09_JAX_BAL",
