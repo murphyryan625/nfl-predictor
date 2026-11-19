@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-17T13:11-06:00",
+ "generated_at": "2026-11-19T14:45-06:00",
  "season": 2026,
  "week": 11,
  "teams": {
@@ -180,8 +180,8 @@
    "pred_margin": 5.28,
    "home_win_prob": 0.6576,
    "notes": [],
-   "predicted_at": "2026-11-17T13:11-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-19T14:45-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -205,8 +205,8 @@
     "ARI: QB change from last game (Gardner Minshew)",
     "ARI: starter has limited NFL history"
    ],
-   "predicted_at": "2026-11-17T13:11-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-19T14:45-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -229,8 +229,8 @@
    "notes": [
     "BAL: QB change from last game (Tyler Huntley)"
    ],
-   "predicted_at": "2026-11-17T13:11-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-19T14:45-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -249,8 +249,8 @@
    "pred_margin": -7.12,
    "home_win_prob": 0.2919,
    "notes": [],
-   "predicted_at": "2026-11-17T13:11-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-19T14:45-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -271,8 +271,8 @@
    "notes": [
     "MIA: starter has limited NFL history"
    ],
-   "predicted_at": "2026-11-17T13:11-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-19T14:45-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -291,8 +291,8 @@
    "pred_margin": 13.86,
    "home_win_prob": 0.8568,
    "notes": [],
-   "predicted_at": "2026-11-17T13:11-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-19T14:45-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -311,8 +311,8 @@
    "pred_margin": 4.41,
    "home_win_prob": 0.6329,
    "notes": [],
-   "predicted_at": "2026-11-17T13:11-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-19T14:45-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -331,8 +331,8 @@
    "pred_margin": 8.43,
    "home_win_prob": 0.7417,
    "notes": [],
-   "predicted_at": "2026-11-17T13:11-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-19T14:45-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -353,8 +353,8 @@
    "notes": [
     "Toss-up"
    ],
-   "predicted_at": "2026-11-17T13:11-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-19T14:45-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -375,8 +375,8 @@
    "notes": [
     "LV: starter has limited NFL history"
    ],
-   "predicted_at": "2026-11-17T13:11-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-19T14:45-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -397,8 +397,8 @@
    "notes": [
     "PHI: starter has limited NFL history"
    ],
-   "predicted_at": "2026-11-17T13:11-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-19T14:45-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -419,8 +419,8 @@
    "notes": [
     "Neutral site (no home field)"
    ],
-   "predicted_at": "2026-11-17T13:11-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-19T14:45-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -439,8 +439,8 @@
    "pred_margin": -4.83,
    "home_win_prob": 0.355,
    "notes": [],
-   "predicted_at": "2026-11-17T13:11-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-19T14:45-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   }
