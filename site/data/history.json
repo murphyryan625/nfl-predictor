@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-11-19T14:45-06:00",
+ "generated_at": "2026-11-21T04:57-06:00",
  "summary": {
   "all": {
-   "games": 150,
-   "wins": 103,
+   "games": 151,
+   "wins": 104,
    "losses": 46,
-   "brier": 0.2072,
-   "spread_mae": 9.62
+   "brier": 0.2066,
+   "spread_mae": 9.67
   },
   "live_only": {
-   "games": 31,
-   "wins": 24,
+   "games": 32,
+   "wins": 25,
    "losses": 7,
-   "brier": 0.1635,
-   "spread_mae": 9.5
+   "brier": 0.162,
+   "spread_mae": 9.76
   }
  },
  "weekly": [
@@ -126,9 +126,46 @@
    "spread_mae": 10.37,
    "running_brier": 0.2072,
    "live": true
+  },
+  {
+   "season": 2026,
+   "week": 11,
+   "games": 1,
+   "wins": 1,
+   "losses": 0,
+   "brier": 0.1172,
+   "spread_mae": 17.72,
+   "running_brier": 0.2066,
+   "live": true
   }
  ],
  "games": [
+  {
+   "game_id": "2026_11_IND_HOU",
+   "season": 2026,
+   "week": 11,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-19T19:15:00-06:00",
+   "home_team": "HOU",
+   "away_team": "IND",
+   "home_qb": "C.J. Stroud",
+   "away_qb": "Daniel Jones",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 5.28,
+   "home_win_prob": 0.6576,
+   "notes": [],
+   "predicted_at": "2026-11-19T14:45-06:00",
+   "run": "refresh",
+   "home_score": 26.0,
+   "away_score": 3.0,
+   "margin": 23.0,
+   "pick": "HOU",
+   "pick_prob": 0.6576,
+   "correct": 1.0,
+   "spread_error": 17.72,
+   "brier": 0.11723776000000002
+  },
   {
    "game_id": "2026_10_WAS_NYG",
    "season": 2026,

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19T14:45-06:00",
+ "generated_at": "2026-11-21T04:57-06:00",
  "season": 2026,
  "week": 11,
  "teams": {
@@ -182,8 +182,8 @@
    "notes": [],
    "predicted_at": "2026-11-19T14:45-06:00",
    "run": "refresh",
-   "home_score": null,
-   "away_score": null
+   "home_score": 26.0,
+   "away_score": 3.0
   },
   {
    "game_id": "2026_11_ARI_KC",
@@ -197,15 +197,17 @@
    "away_qb": "Carson Beck",
    "home_qb_flags": [],
    "away_qb_flags": [
+    "Carson Beck questionable",
     "QB change from last game (Gardner Minshew)"
    ],
    "pred_margin": 16.49,
-   "home_win_prob": 0.8977,
+   "home_win_prob": 0.8976,
    "notes": [
+    "ARI: Carson Beck questionable",
     "ARI: QB change from last game (Gardner Minshew)",
     "ARI: starter has limited NFL history"
    ],
-   "predicted_at": "2026-11-19T14:45-06:00",
+   "predicted_at": "2026-11-21T04:57-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -224,12 +226,12 @@
    "away_qb_flags": [
     "QB change from last game (Tyler Huntley)"
    ],
-   "pred_margin": 3.47,
-   "home_win_prob": 0.6053,
+   "pred_margin": 3.5,
+   "home_win_prob": 0.6061,
    "notes": [
     "BAL: QB change from last game (Tyler Huntley)"
    ],
-   "predicted_at": "2026-11-19T14:45-06:00",
+   "predicted_at": "2026-11-21T04:57-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -246,10 +248,10 @@
    "away_qb": "Trevor Lawrence",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": -7.12,
-   "home_win_prob": 0.2919,
+   "pred_margin": -7.1,
+   "home_win_prob": 0.2924,
    "notes": [],
-   "predicted_at": "2026-11-19T14:45-06:00",
+   "predicted_at": "2026-11-21T04:57-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -266,12 +268,12 @@
    "away_qb": "Kyle McCord",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": 18.3,
-   "home_win_prob": 0.9204,
+   "pred_margin": 18.31,
+   "home_win_prob": 0.9205,
    "notes": [
     "MIA: starter has limited NFL history"
    ],
-   "predicted_at": "2026-11-19T14:45-06:00",
+   "predicted_at": "2026-11-21T04:57-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -288,10 +290,10 @@
    "away_qb": "Tyler Shough",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": 13.86,
-   "home_win_prob": 0.8568,
+   "pred_margin": 13.82,
+   "home_win_prob": 0.8561,
    "notes": [],
-   "predicted_at": "2026-11-19T14:45-06:00",
+   "predicted_at": "2026-11-21T04:57-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -307,11 +309,15 @@
    "home_qb": "Jared Goff",
    "away_qb": "Baker Mayfield",
    "home_qb_flags": [],
-   "away_qb_flags": [],
-   "pred_margin": 4.41,
-   "home_win_prob": 0.6329,
-   "notes": [],
-   "predicted_at": "2026-11-19T14:45-06:00",
+   "away_qb_flags": [
+    "Baker Mayfield questionable"
+   ],
+   "pred_margin": 4.46,
+   "home_win_prob": 0.6343,
+   "notes": [
+    "TB: Baker Mayfield questionable"
+   ],
+   "predicted_at": "2026-11-21T04:57-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -329,9 +335,9 @@
    "home_qb_flags": [],
    "away_qb_flags": [],
    "pred_margin": 8.43,
-   "home_win_prob": 0.7417,
+   "home_win_prob": 0.7416,
    "notes": [],
-   "predicted_at": "2026-11-19T14:45-06:00",
+   "predicted_at": "2026-11-21T04:57-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -348,12 +354,12 @@
    "away_qb": "Geno Smith",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": 1.28,
-   "home_win_prob": 0.5392,
+   "pred_margin": 1.29,
+   "home_win_prob": 0.5396,
    "notes": [
     "Toss-up"
    ],
-   "predicted_at": "2026-11-19T14:45-06:00",
+   "predicted_at": "2026-11-21T04:57-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -370,12 +376,12 @@
    "away_qb": "Fernando Mendoza",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": 14.63,
-   "home_win_prob": 0.8698,
+   "pred_margin": 14.66,
+   "home_win_prob": 0.8702,
    "notes": [
     "LV: starter has limited NFL history"
    ],
-   "predicted_at": "2026-11-19T14:45-06:00",
+   "predicted_at": "2026-11-21T04:57-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -392,12 +398,12 @@
    "away_qb": "Aaron Rodgers",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": -7.32,
-   "home_win_prob": 0.2867,
+   "pred_margin": -7.25,
+   "home_win_prob": 0.2884,
    "notes": [
     "PHI: starter has limited NFL history"
    ],
-   "predicted_at": "2026-11-19T14:45-06:00",
+   "predicted_at": "2026-11-21T04:57-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -415,11 +421,11 @@
    "home_qb_flags": [],
    "away_qb_flags": [],
    "pred_margin": 4.1,
-   "home_win_prob": 0.6237,
+   "home_win_prob": 0.6239,
    "notes": [
     "Neutral site (no home field)"
    ],
-   "predicted_at": "2026-11-19T14:45-06:00",
+   "predicted_at": "2026-11-21T04:57-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
@@ -437,9 +443,9 @@
    "home_qb_flags": [],
    "away_qb_flags": [],
    "pred_margin": -4.83,
-   "home_win_prob": 0.355,
+   "home_win_prob": 0.3551,
    "notes": [],
-   "predicted_at": "2026-11-19T14:45-06:00",
+   "predicted_at": "2026-11-21T04:57-06:00",
    "run": "refresh",
    "home_score": null,
    "away_score": null
