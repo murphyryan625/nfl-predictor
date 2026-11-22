@@ -150,15 +150,15 @@ game_id,season,week,game_type,kickoff_ct,home_team,away_team,home_qb,away_qb,hom
 2026_10_PIT_CIN,2026,10,REG,2026-11-15T19:20:00-06:00,CIN,PIT,Joe Burrow,Aaron Rodgers,[],[],2.01,0.5614,[],2026-11-15T15:18-06:00,refresh,38.0,18.0
 2026_10_LAC_BAL,2026,10,REG,2026-11-16T19:15:00-06:00,BAL,LAC,Jacoby Brissett,Justin Herbert,"[""QB change from last game (Joe Fagnano)""]",[],6.79,0.6991,"[""BAL: QB change from last game (Joe Fagnano)""]",2026-11-15T15:18-06:00,refresh,20.0,23.0
 2026_11_IND_HOU,2026,11,REG,2026-11-19T19:15:00-06:00,HOU,IND,C.J. Stroud,Daniel Jones,[],[],5.28,0.6576,[],2026-11-19T14:45-06:00,refresh,26.0,3.0
-2026_11_ARI_KC,2026,11,REG,2026-11-22T12:00:00-06:00,KC,ARI,Patrick Mahomes,Carson Beck,[],"[""Carson Beck questionable"", ""QB change from last game (Gardner Minshew)""]",16.49,0.8976,"[""ARI: Carson Beck questionable"", ""ARI: QB change from last game (Gardner Minshew)"", ""ARI: starter has limited NFL history""]",2026-11-22T11:07-06:00,refresh,,
-2026_11_BAL_CAR,2026,11,REG,2026-11-22T12:00:00-06:00,CAR,BAL,Bryce Young,Jacoby Brissett,[],"[""QB change from last game (Tyler Huntley)""]",3.5,0.6061,"[""BAL: QB change from last game (Tyler Huntley)""]",2026-11-22T11:07-06:00,refresh,,
+2026_11_ARI_KC,2026,11,REG,2026-11-22T12:00:00-06:00,KC,ARI,Patrick Mahomes,Carson Beck,[],"[""Carson Beck questionable"", ""QB change from last game (Gardner Minshew)""]",16.49,0.8976,"[""ARI: Carson Beck questionable"", ""ARI: QB change from last game (Gardner Minshew)"", ""ARI: starter has limited NFL history""]",2026-11-22T11:07-06:00,refresh,34.0,7.0
+2026_11_BAL_CAR,2026,11,REG,2026-11-22T12:00:00-06:00,CAR,BAL,Bryce Young,Jacoby Brissett,[],"[""QB change from last game (Tyler Huntley)""]",3.5,0.6061,"[""BAL: QB change from last game (Tyler Huntley)""]",2026-11-22T11:07-06:00,refresh,35.0,33.0
 2026_11_JAX_NYG,2026,11,REG,2026-11-22T12:00:00-06:00,NYG,JAX,J.J. McCarthy,Trevor Lawrence,[],[],-7.1,0.2924,[],2026-11-22T11:07-06:00,refresh,,
-2026_11_MIA_BUF,2026,11,REG,2026-11-22T12:00:00-06:00,BUF,MIA,Josh Allen,Kyle McCord,[],[],18.31,0.9205,"[""MIA: starter has limited NFL history""]",2026-11-22T11:07-06:00,refresh,,
-2026_11_NO_CHI,2026,11,REG,2026-11-22T12:00:00-06:00,CHI,NO,Caleb Williams,Tyler Shough,[],[],13.82,0.8561,[],2026-11-22T11:07-06:00,refresh,,
-2026_11_TB_DET,2026,11,REG,2026-11-22T12:00:00-06:00,DET,TB,Jared Goff,Baker Mayfield,[],"[""Baker Mayfield questionable""]",4.46,0.6343,"[""TB: Baker Mayfield questionable""]",2026-11-22T11:07-06:00,refresh,,
-2026_11_TEN_DAL,2026,11,REG,2026-11-22T12:00:00-06:00,DAL,TEN,Dak Prescott,Cam Ward,[],[],8.43,0.7416,[],2026-11-22T11:07-06:00,refresh,,
+2026_11_MIA_BUF,2026,11,REG,2026-11-22T12:00:00-06:00,BUF,MIA,Josh Allen,Kyle McCord,[],[],18.31,0.9205,"[""MIA: starter has limited NFL history""]",2026-11-22T11:07-06:00,refresh,26.0,9.0
+2026_11_NO_CHI,2026,11,REG,2026-11-22T12:00:00-06:00,CHI,NO,Caleb Williams,Tyler Shough,[],[],13.82,0.8561,[],2026-11-22T11:07-06:00,refresh,21.0,13.0
+2026_11_TB_DET,2026,11,REG,2026-11-22T12:00:00-06:00,DET,TB,Jared Goff,Baker Mayfield,[],"[""Baker Mayfield questionable""]",4.46,0.6343,"[""TB: Baker Mayfield questionable""]",2026-11-22T11:07-06:00,refresh,31.0,21.0
+2026_11_TEN_DAL,2026,11,REG,2026-11-22T12:00:00-06:00,DAL,TEN,Dak Prescott,Cam Ward,[],[],8.43,0.7416,[],2026-11-22T11:07-06:00,refresh,51.0,30.0
 2026_11_NYJ_LAC,2026,11,REG,2026-11-22T15:05:00-06:00,LAC,NYJ,Justin Herbert,Geno Smith,[],[],1.29,0.5396,"[""Toss-up""]",2026-11-22T11:07-06:00,refresh,,
 2026_11_LV_DEN,2026,11,REG,2026-11-22T15:25:00-06:00,DEN,LV,Bo Nix,Fernando Mendoza,[],[],14.66,0.8702,"[""LV: starter has limited NFL history""]",2026-11-22T11:07-06:00,refresh,,
-2026_11_PIT_PHI,2026,11,REG,2026-11-22T15:25:00-06:00,PHI,PIT,Joe Milton III,Aaron Rodgers,[],[],-7.25,0.2884,"[""PHI: starter has limited NFL history""]",2026-11-22T11:07-06:00,refresh,,
-2026_11_MIN_SF,2026,11,REG,2026-11-22T19:20:00-06:00,SF,MIN,Brock Purdy,Kirk Cousins,[],[],4.1,0.6239,"[""Neutral site (no home field)""]",2026-11-22T11:07-06:00,refresh,,
-2026_11_CIN_WAS,2026,11,REG,2026-11-23T19:15:00-06:00,WAS,CIN,Jayden Daniels,Joe Burrow,[],[],-4.83,0.3551,[],2026-11-22T11:07-06:00,refresh,,
+2026_11_PIT_PHI,2026,11,REG,2026-11-22T15:25:00-06:00,PHI,PIT,Joe Milton III,Aaron Rodgers,[],[],-7.25,0.2884,"[""PHI: starter has limited NFL history""]",2026-11-22T11:07-06:00,refresh,19.0,16.0
+2026_11_MIN_SF,2026,11,REG,2026-11-22T19:20:00-06:00,SF,MIN,Brock Purdy,Kirk Cousins,[],[],4.15,0.6254,"[""Neutral site (no home field)""]",2026-11-22T16:02-06:00,refresh,,
+2026_11_CIN_WAS,2026,11,REG,2026-11-23T19:15:00-06:00,WAS,CIN,Jayden Daniels,Joe Burrow,[],[],-4.82,0.3553,[],2026-11-22T16:02-06:00,refresh,,
