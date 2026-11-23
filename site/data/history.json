@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-11-22T16:02-06:00",
+ "generated_at": "2026-11-23T17:55-06:00",
  "summary": {
   "all": {
-   "games": 158,
-   "wins": 110,
-   "losses": 47,
-   "brier": 0.2032,
+   "games": 162,
+   "wins": 112,
+   "losses": 49,
+   "brier": 0.204,
    "spread_mae": 9.54
   },
   "live_only": {
-   "games": 39,
-   "wins": 31,
-   "losses": 8,
-   "brier": 0.156,
-   "spread_mae": 9.23
+   "games": 43,
+   "wins": 33,
+   "losses": 10,
+   "brier": 0.1636,
+   "spread_mae": 9.25
   }
  },
  "weekly": [
@@ -130,12 +130,12 @@
   {
    "season": 2026,
    "week": 11,
-   "games": 8,
-   "wins": 7,
-   "losses": 1,
-   "brier": 0.1271,
-   "spread_mae": 8.15,
-   "running_brier": 0.2032,
+   "games": 12,
+   "wins": 9,
+   "losses": 3,
+   "brier": 0.1638,
+   "spread_mae": 8.59,
+   "running_brier": 0.204,
    "live": true
   }
  ],
@@ -228,6 +228,32 @@
    "correct": 1.0,
    "spread_error": 1.5,
    "brier": 0.15515721000000002
+  },
+  {
+   "game_id": "2026_11_JAX_NYG",
+   "season": 2026,
+   "week": 11,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-22T12:00:00-06:00",
+   "home_team": "NYG",
+   "away_team": "JAX",
+   "home_qb": "J.J. McCarthy",
+   "away_qb": "Trevor Lawrence",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": -7.1,
+   "home_win_prob": 0.2924,
+   "notes": [],
+   "predicted_at": "2026-11-22T11:07-06:00",
+   "run": "refresh",
+   "home_score": 23.0,
+   "away_score": 18.0,
+   "margin": 5.0,
+   "pick": "JAX",
+   "pick_prob": 0.7076,
+   "correct": 0.0,
+   "spread_error": 12.1,
+   "brier": 0.50069776
   },
   {
    "game_id": "2026_11_MIA_BUF",
@@ -340,6 +366,62 @@
    "brier": 0.06677055999999998
   },
   {
+   "game_id": "2026_11_NYJ_LAC",
+   "season": 2026,
+   "week": 11,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-22T15:05:00-06:00",
+   "home_team": "LAC",
+   "away_team": "NYJ",
+   "home_qb": "Justin Herbert",
+   "away_qb": "Geno Smith",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 1.29,
+   "home_win_prob": 0.5396,
+   "notes": [
+    "Toss-up"
+   ],
+   "predicted_at": "2026-11-22T11:07-06:00",
+   "run": "refresh",
+   "home_score": 24.0,
+   "away_score": 27.0,
+   "margin": -3.0,
+   "pick": "LAC",
+   "pick_prob": 0.5396,
+   "correct": 0.0,
+   "spread_error": 4.29,
+   "brier": 0.29116815999999995
+  },
+  {
+   "game_id": "2026_11_LV_DEN",
+   "season": 2026,
+   "week": 11,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-22T15:25:00-06:00",
+   "home_team": "DEN",
+   "away_team": "LV",
+   "home_qb": "Bo Nix",
+   "away_qb": "Fernando Mendoza",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 14.66,
+   "home_win_prob": 0.8702,
+   "notes": [
+    "LV: starter has limited NFL history"
+   ],
+   "predicted_at": "2026-11-22T11:07-06:00",
+   "run": "refresh",
+   "home_score": 38.0,
+   "away_score": 24.0,
+   "margin": 14.0,
+   "pick": "DEN",
+   "pick_prob": 0.8702,
+   "correct": 1.0,
+   "spread_error": 0.6600000000000001,
+   "brier": 0.01684804000000001
+  },
+  {
    "game_id": "2026_11_PIT_PHI",
    "season": 2026,
    "week": 11,
@@ -366,6 +448,34 @@
    "correct": 0.0,
    "spread_error": 10.25,
    "brier": 0.50637456
+  },
+  {
+   "game_id": "2026_11_MIN_SF",
+   "season": 2026,
+   "week": 11,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-22T19:20:00-06:00",
+   "home_team": "SF",
+   "away_team": "MIN",
+   "home_qb": "Brock Purdy",
+   "away_qb": "Kirk Cousins",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 4.15,
+   "home_win_prob": 0.6254,
+   "notes": [
+    "Neutral site (no home field)"
+   ],
+   "predicted_at": "2026-11-22T16:02-06:00",
+   "run": "refresh",
+   "home_score": 35.0,
+   "away_score": 10.0,
+   "margin": 25.0,
+   "pick": "SF",
+   "pick_prob": 0.6254,
+   "correct": 1.0,
+   "spread_error": 20.85,
+   "brier": 0.14032516000000003
   },
   {
    "game_id": "2026_10_WAS_NYG",
