@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-11-23T17:55-06:00",
+ "generated_at": "2026-11-24T14:40-06:00",
  "summary": {
   "all": {
-   "games": 162,
+   "games": 163,
    "wins": 112,
-   "losses": 49,
-   "brier": 0.204,
-   "spread_mae": 9.54
+   "losses": 50,
+   "brier": 0.2053,
+   "spread_mae": 9.52
   },
   "live_only": {
-   "games": 43,
+   "games": 44,
    "wins": 33,
-   "losses": 10,
-   "brier": 0.1636,
-   "spread_mae": 9.25
+   "losses": 11,
+   "brier": 0.1693,
+   "spread_mae": 9.19
   }
  },
  "weekly": [
@@ -130,12 +130,12 @@
   {
    "season": 2026,
    "week": 11,
-   "games": 12,
+   "games": 13,
    "wins": 9,
-   "losses": 3,
-   "brier": 0.1638,
-   "spread_mae": 8.59,
-   "running_brier": 0.204,
+   "losses": 4,
+   "brier": 0.1832,
+   "spread_mae": 8.46,
+   "running_brier": 0.2053,
    "live": true
   }
  ],
@@ -476,6 +476,32 @@
    "correct": 1.0,
    "spread_error": 20.85,
    "brier": 0.14032516000000003
+  },
+  {
+   "game_id": "2026_11_CIN_WAS",
+   "season": 2026,
+   "week": 11,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-23T19:15:00-06:00",
+   "home_team": "WAS",
+   "away_team": "CIN",
+   "home_qb": "Jayden Daniels",
+   "away_qb": "Joe Burrow",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": -4.82,
+   "home_win_prob": 0.3553,
+   "notes": [],
+   "predicted_at": "2026-11-22T16:02-06:00",
+   "run": "refresh",
+   "home_score": 22.0,
+   "away_score": 20.0,
+   "margin": 2.0,
+   "pick": "CIN",
+   "pick_prob": 0.6447,
+   "correct": 0.0,
+   "spread_error": 6.82,
+   "brier": 0.41563809000000007
   },
   {
    "game_id": "2026_10_WAS_NYG",
