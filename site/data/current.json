@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T14:40-06:00",
+ "generated_at": "2026-11-26T15:41-06:00",
  "season": 2026,
  "week": 12,
  "teams": {
@@ -182,8 +182,8 @@
    "notes": [],
    "predicted_at": "2026-11-24T14:40-06:00",
    "run": "full",
-   "home_score": null,
-   "away_score": null
+   "home_score": 26.0,
+   "away_score": 13.0
   },
   {
    "game_id": "2026_12_CHI_DET",
@@ -202,8 +202,8 @@
    "notes": [],
    "predicted_at": "2026-11-24T14:40-06:00",
    "run": "full",
-   "home_score": null,
-   "away_score": null
+   "home_score": 35.0,
+   "away_score": 39.0
   },
   {
    "game_id": "2026_12_PHI_DAL",
@@ -239,11 +239,11 @@
    "away_qb": "Patrick Mahomes",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": 3.92,
+   "pred_margin": 3.91,
    "home_win_prob": 0.6185,
    "notes": [],
-   "predicted_at": "2026-11-24T14:40-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-26T15:41-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -255,17 +255,20 @@
    "kickoff_ct": "2026-11-27T14:00:00-06:00",
    "home_team": "PIT",
    "away_team": "DEN",
-   "home_qb": "Aaron Rodgers",
+   "home_qb": "Mason Rudolph",
    "away_qb": "Bo Nix",
-   "home_qb_flags": [],
+   "home_qb_flags": [
+    "QB change from last game (Aaron Rodgers)"
+   ],
    "away_qb_flags": [],
-   "pred_margin": -0.64,
-   "home_win_prob": 0.4803,
+   "pred_margin": -0.77,
+   "home_win_prob": 0.4765,
    "notes": [
+    "PIT: QB change from last game (Aaron Rodgers)",
     "Toss-up"
    ],
-   "predicted_at": "2026-11-24T14:40-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-26T15:41-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -281,11 +284,11 @@
    "away_qb": "Michael Penix Jr.",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": 6.46,
-   "home_win_prob": 0.6905,
+   "pred_margin": 6.47,
+   "home_win_prob": 0.6909,
    "notes": [],
-   "predicted_at": "2026-11-24T14:40-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-26T15:41-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -301,11 +304,11 @@
    "away_qb": "Jacoby Brissett",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": 6.84,
-   "home_win_prob": 0.7008,
+   "pred_margin": 6.85,
+   "home_win_prob": 0.701,
    "notes": [],
-   "predicted_at": "2026-11-24T14:40-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-26T15:41-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -322,10 +325,10 @@
    "home_qb_flags": [],
    "away_qb_flags": [],
    "pred_margin": 11.45,
-   "home_win_prob": 0.811,
+   "home_win_prob": 0.8111,
    "notes": [],
-   "predicted_at": "2026-11-24T14:40-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-26T15:41-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -344,13 +347,13 @@
    ],
    "away_qb_flags": [],
    "pred_margin": -0.62,
-   "home_win_prob": 0.4811,
+   "home_win_prob": 0.481,
    "notes": [
     "IND: QB change from last game (Daniel Jones)",
     "Toss-up"
    ],
-   "predicted_at": "2026-11-24T14:40-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-26T15:41-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -366,13 +369,13 @@
    "away_qb": "Geno Smith",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": -3.63,
-   "home_win_prob": 0.3898,
+   "pred_margin": -3.64,
+   "home_win_prob": 0.3895,
    "notes": [
     "MIA: starter has limited NFL history"
    ],
-   "predicted_at": "2026-11-24T14:40-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-26T15:41-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -388,11 +391,11 @@
    "away_qb": "Cam Ward",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": 13.0,
+   "pred_margin": 12.99,
    "home_win_prob": 0.8415,
    "notes": [],
-   "predicted_at": "2026-11-24T14:40-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-26T15:41-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -410,14 +413,14 @@
    "away_qb_flags": [
     "QB change from last game (Drake Maye)"
    ],
-   "pred_margin": 1.0,
-   "home_win_prob": 0.5306,
+   "pred_margin": 1.02,
+   "home_win_prob": 0.5312,
    "notes": [
     "NE: QB change from last game (Drake Maye)",
     "Toss-up"
    ],
-   "predicted_at": "2026-11-24T14:40-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-26T15:41-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -433,11 +436,11 @@
    "away_qb": "Sam Darnold",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": 5.05,
-   "home_win_prob": 0.6513,
+   "pred_margin": 5.03,
+   "home_win_prob": 0.6508,
    "notes": [],
-   "predicted_at": "2026-11-24T14:40-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-26T15:41-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -455,14 +458,14 @@
     "QB change from last game (Josh Johnson)"
    ],
    "away_qb_flags": [],
-   "pred_margin": -7.03,
-   "home_win_prob": 0.2941,
+   "pred_margin": -7.02,
+   "home_win_prob": 0.2943,
    "notes": [
     "ARI: QB change from last game (Josh Johnson)",
     "ARI: starter has limited NFL history"
    ],
-   "predicted_at": "2026-11-24T14:40-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-26T15:41-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -478,13 +481,13 @@
    "away_qb": "Fernando Mendoza",
    "home_qb_flags": [],
    "away_qb_flags": [],
-   "pred_margin": 9.63,
-   "home_win_prob": 0.7709,
+   "pred_margin": 9.66,
+   "home_win_prob": 0.7716,
    "notes": [
     "LV: starter has limited NFL history"
    ],
-   "predicted_at": "2026-11-24T14:40-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-26T15:41-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   },
@@ -501,10 +504,10 @@
    "home_qb_flags": [],
    "away_qb_flags": [],
    "pred_margin": 4.28,
-   "home_win_prob": 0.6291,
+   "home_win_prob": 0.6292,
    "notes": [],
-   "predicted_at": "2026-11-24T14:40-06:00",
-   "run": "full",
+   "predicted_at": "2026-11-26T15:41-06:00",
+   "run": "refresh",
    "home_score": null,
    "away_score": null
   }

@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-11-24T14:40-06:00",
+ "generated_at": "2026-11-26T15:41-06:00",
  "summary": {
   "all": {
-   "games": 163,
-   "wins": 112,
-   "losses": 50,
-   "brier": 0.2053,
-   "spread_mae": 9.52
+   "games": 165,
+   "wins": 113,
+   "losses": 51,
+   "brier": 0.2055,
+   "spread_mae": 9.48
   },
   "live_only": {
-   "games": 44,
-   "wins": 33,
-   "losses": 11,
-   "brier": 0.1693,
-   "spread_mae": 9.19
+   "games": 46,
+   "wins": 34,
+   "losses": 12,
+   "brier": 0.1716,
+   "spread_mae": 9.06
   }
  },
  "weekly": [
@@ -137,9 +137,72 @@
    "spread_mae": 8.46,
    "running_brier": 0.2053,
    "live": true
+  },
+  {
+   "season": 2026,
+   "week": 12,
+   "games": 2,
+   "wins": 1,
+   "losses": 1,
+   "brier": 0.2219,
+   "spread_mae": 6.1,
+   "running_brier": 0.2055,
+   "live": true
   }
  ],
  "games": [
+  {
+   "game_id": "2026_12_GB_LA",
+   "season": 2026,
+   "week": 12,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-25T19:00:00-06:00",
+   "home_team": "LA",
+   "away_team": "GB",
+   "home_qb": "Matthew Stafford",
+   "away_qb": "Jordan Love",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 8.63,
+   "home_win_prob": 0.7468,
+   "notes": [],
+   "predicted_at": "2026-11-24T14:40-06:00",
+   "run": "full",
+   "home_score": 26.0,
+   "away_score": 13.0,
+   "margin": 13.0,
+   "pick": "LA",
+   "pick_prob": 0.7468,
+   "correct": 1.0,
+   "spread_error": 4.369999999999999,
+   "brier": 0.06411023999999999
+  },
+  {
+   "game_id": "2026_12_CHI_DET",
+   "season": 2026,
+   "week": 12,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-26T12:00:00-06:00",
+   "home_team": "DET",
+   "away_team": "CHI",
+   "home_qb": "Jared Goff",
+   "away_qb": "Caleb Williams",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 3.84,
+   "home_win_prob": 0.6162,
+   "notes": [],
+   "predicted_at": "2026-11-24T14:40-06:00",
+   "run": "full",
+   "home_score": 35.0,
+   "away_score": 39.0,
+   "margin": -4.0,
+   "pick": "DET",
+   "pick_prob": 0.6162,
+   "correct": 0.0,
+   "spread_error": 7.84,
+   "brier": 0.37970244
+  },
   {
    "game_id": "2026_11_IND_HOU",
    "season": 2026,
