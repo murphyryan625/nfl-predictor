@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-11-26T15:41-06:00",
+ "generated_at": "2026-11-28T05:41-06:00",
  "summary": {
   "all": {
-   "games": 165,
-   "wins": 113,
-   "losses": 51,
-   "brier": 0.2055,
-   "spread_mae": 9.48
+   "games": 168,
+   "wins": 114,
+   "losses": 53,
+   "brier": 0.2082,
+   "spread_mae": 9.53
   },
   "live_only": {
-   "games": 46,
-   "wins": 34,
-   "losses": 12,
-   "brier": 0.1716,
-   "spread_mae": 9.06
+   "games": 49,
+   "wins": 35,
+   "losses": 14,
+   "brier": 0.1828,
+   "spread_mae": 9.23
   }
  },
  "weekly": [
@@ -141,12 +141,12 @@
   {
    "season": 2026,
    "week": 12,
-   "games": 2,
-   "wins": 1,
-   "losses": 1,
-   "brier": 0.2219,
-   "spread_mae": 6.1,
-   "running_brier": 0.2055,
+   "games": 5,
+   "wins": 2,
+   "losses": 3,
+   "brier": 0.3012,
+   "spread_mae": 9.58,
+   "running_brier": 0.2082,
    "live": true
   }
  ],
@@ -202,6 +202,91 @@
    "correct": 0.0,
    "spread_error": 7.84,
    "brier": 0.37970244
+  },
+  {
+   "game_id": "2026_12_PHI_DAL",
+   "season": 2026,
+   "week": 12,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-26T15:30:00-06:00",
+   "home_team": "DAL",
+   "away_team": "PHI",
+   "home_qb": "Dak Prescott",
+   "away_qb": "Joe Milton III",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 11.01,
+   "home_win_prob": 0.8016,
+   "notes": [
+    "PHI: starter has limited NFL history"
+   ],
+   "predicted_at": "2026-11-24T14:40-06:00",
+   "run": "full",
+   "home_score": 38.0,
+   "away_score": 39.0,
+   "margin": -1.0,
+   "pick": "DAL",
+   "pick_prob": 0.8016,
+   "correct": 0.0,
+   "spread_error": 12.01,
+   "brier": 0.64256256
+  },
+  {
+   "game_id": "2026_12_KC_BUF",
+   "season": 2026,
+   "week": 12,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-26T19:20:00-06:00",
+   "home_team": "BUF",
+   "away_team": "KC",
+   "home_qb": "Josh Allen",
+   "away_qb": "Patrick Mahomes",
+   "home_qb_flags": [],
+   "away_qb_flags": [],
+   "pred_margin": 3.91,
+   "home_win_prob": 0.6185,
+   "notes": [],
+   "predicted_at": "2026-11-26T15:41-06:00",
+   "run": "refresh",
+   "home_score": 13.0,
+   "away_score": 10.0,
+   "margin": 3.0,
+   "pick": "BUF",
+   "pick_prob": 0.6185,
+   "correct": 1.0,
+   "spread_error": 0.9100000000000001,
+   "brier": 0.14554224999999996
+  },
+  {
+   "game_id": "2026_12_DEN_PIT",
+   "season": 2026,
+   "week": 12,
+   "game_type": "REG",
+   "kickoff_ct": "2026-11-27T14:00:00-06:00",
+   "home_team": "PIT",
+   "away_team": "DEN",
+   "home_qb": "Mason Rudolph",
+   "away_qb": "Bo Nix",
+   "home_qb_flags": [
+    "QB change from last game (Aaron Rodgers)"
+   ],
+   "away_qb_flags": [],
+   "pred_margin": -0.77,
+   "home_win_prob": 0.4765,
+   "notes": [
+    "PIT: QB change from last game (Aaron Rodgers)",
+    "Toss-up"
+   ],
+   "predicted_at": "2026-11-26T15:41-06:00",
+   "run": "refresh",
+   "home_score": 27.0,
+   "away_score": 5.0,
+   "margin": 22.0,
+   "pick": "DEN",
+   "pick_prob": 0.5235000000000001,
+   "correct": 0.0,
+   "spread_error": 22.77,
+   "brier": 0.27405225000000005
   },
   {
    "game_id": "2026_11_IND_HOU",
